@@ -9,6 +9,11 @@
 @gray-4: #252525;
 @gray-5: #e7e7e7;
 @gray-6: #363636;
+@gray-7: #dcdcdc;
+@gray-8: #f9f9f9;
+@gray-9: #636363;
+@gray-10: #a7a7a7;
+@gray-11: #c1c1c1;
 
 @white-1: rgba(255, 255, 255, 0.7);
 
@@ -87,6 +92,39 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: @s;
 }
 
+.box-shadow(@size, @color) {
+  box-shadow: 0 0 @size 0 @color;
+}
+
+.link-type(@font-size, @color) {
+  font-family: 'proxima_nova_semibold';
+  text-transform: uppercase;
+  font-size: @font-size;
+  color: @color;
+}
+
+.font-settings-1 {
+  line-height: 21px;
+  font-size: 13px;
+  color: @gray-9;
+}
+
+.icon(@size, @bg-color, @color) {
+  color: @color;
+  width: @size;
+  height: @size;
+  line-height: @size;
+  background-color: @bg-color;
+  text-align: center;
+  display: inline-block;
+  .border-radius(100%);
+  vertical-align: middle;
+
+  > i {
+    vertical-align: text-top;
+  }
+}
+
 a {
   color: @green-1;
 
@@ -103,11 +141,40 @@ a {
   }
 }
 
-.link-type(@font-size, @color) {
+/***************************
+****************************
+Button & Links Styles
+****************************
+***************************/
+
+.eg-btn {
   font-family: 'proxima_nova_semibold';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: @font-size;
-  color: @color;
+  line-height: normal;
+  text-align: center;
+  border: none;
+  padding: 0;
+
+  &.btn-main {
+    background-color: @green-1;
+    color: white;
+    font-size: 17px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    .border-radius(25px);
+
+    &:link
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: @green-2;
+    }
+  }
 }
 
 /***************************
@@ -123,6 +190,14 @@ Header Styles
     height: 29px;
     width: 131px;
     text-indent: -9999px;
+  }
+
+  &.color {
+    a {
+      background: @bg-color url("../images/logo-color.png") no-repeat scroll 0 0;
+      height: 32px;
+      width: 143px;
+    }
   }
 }
 
@@ -280,6 +355,198 @@ Content Styles
             z-index: -1;
           }
         }
+      }
+    }
+  }
+}
+
+.content-wrapper {
+  .box-shadow(1px, @gray-7);
+  background-color: white;
+  .border(1px, @gray-7);
+
+  > * {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.title {
+  background-color: @gray-8;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  .border-bottom(1px, @gray-7);
+
+  h5 {
+    text-transform: uppercase;
+  }
+}
+
+/***************************
+****************************
+Manage Venue Details
+****************************
+***************************/
+
+.content {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-item {
+  input,
+  textarea {
+    &:focus {
+      border-color: @green-1;
+      .box-shadow(3px, @green-1);
+    }
+  }
+
+  textarea {
+    height: 95px;
+  }
+
+  input {
+    height: 40px;
+  }
+}
+
+.content-section {
+  margin-bottom: 30px;
+  min-height: 75px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > div {
+    float: left;
+    width: 45%;
+    padding-right: 45px;
+
+    & + div {
+      padding-right: 0;
+      width: 55%;
+    }
+
+    label,
+    span {
+      font-weight: 700;
+      margin-bottom: 5px;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    p {
+      .font-settings-1;
+      margin: 0;
+    }
+
+    &.form-item {
+      background: url("../images/sep-1.png") no-repeat 0 100%;
+      padding-bottom: 33px;
+
+      &.n-m-b {
+        background: none;
+        padding: 0;
+      }
+    }
+  }
+
+  &.button {
+    margin: 0 -30px;
+    .border-top(1px, @gray-7);
+    min-height: 0;
+    padding: 30px 30px 0 30px;
+  }
+}
+
+.green-icon {
+  .border(1px, @green-1);
+  .icon(35px, @green-1, white);
+}
+
+.white-icon {
+  .border(1px, @gray-10);
+  .icon(35px, white, @gray-10);
+}
+
+.select-options {
+  > li {
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+    line-height: 35px;
+
+    a {
+      display: block;
+      margin-right: 14px;
+      float: left;
+
+      .icon {
+        .white-icon;
+      }
+
+      &:hover
+      .icon {
+        .green-icon;
+      }
+    }
+
+    &.active {
+      a {
+        .icon {
+          .green-icon;
+        }
+      }
+    }
+
+    &:nth-last-of-type(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/***************************
+****************************
+Footer Styles
+****************************
+***************************/
+
+#footer {
+  margin-top: 15px;
+
+  .logo-wrapper {
+    text-align: center;
+    padding-bottom: 20px;
+    .border-bottom(1px, @gray-5);
+  }
+
+  .bottom {
+    padding: 16px 0;
+    font-size: 12px;
+    color: @gray-11;
+
+    p {
+      float: left;
+      margin: 0;
+
+      span {
+        display: inline-block;
+        margin: 0 11px;
+      }
+
+      a {
+        color: @gray-11;
+
+        &:hover {
+          color: @gray-11;
+        }
+      }
+
+      & + p {
+        float: right;
       }
     }
   }
