@@ -19,6 +19,73 @@
 
 /***************************
 ****************************
+Responsive
+****************************
+***************************/
+
+@large: ~"(min-width: 1200px)";
+@medium: ~"(min-width: 993px) and (max-width: 1200px)";
+@small: ~"(min-width: 768px) and (max-width: 992px)";
+@xs: ~"(max-width: 767px)";
+
+.show-xs,
+.show-s,
+.show-m,
+.show-xl {
+  display: none;
+  visibility: hidden;
+}
+
+@media @large {
+  .hide-xl {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .show-xl {
+    display: block;
+    visibility: visible;
+  }
+}
+
+@media @medium {
+  .hide-m {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .show-m {
+    display: block;
+    visibility: visible;
+  }
+}
+
+@media @small {
+  .hide-s {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .show-s {
+    display: block;
+    visibility: visible;
+  }
+}
+
+@media @xs {
+  .hide-xs {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .show-xs {
+    display: block;
+    visibility: visible;
+  }
+}
+
+/***************************
+****************************
 Fonts
 ****************************
 ***************************/
@@ -318,6 +385,7 @@ Content Styles
   ul {
     li {
       .border-bottom(1px, @gray-5);
+      margin-right: 23px;
 
       &:last-child {
         border-bottom: none;
@@ -350,9 +418,13 @@ Content Styles
             position: absolute;
             height: 48px;
             top: 0;
-            left: -1414px;
+            left: -1437px;
             width: 1700px;
             z-index: -1;
+
+            @media @medium {
+              left: -1487px;
+            }
           }
         }
       }
@@ -397,6 +469,8 @@ Manage Venue Details
 .form-item {
   input,
   textarea {
+    resize: none;
+
     &:focus {
       border-color: @green-1;
       .box-shadow(3px, @green-1);
@@ -409,6 +483,15 @@ Manage Venue Details
 
   input {
     height: 40px;
+  }
+}
+
+.map-wrapper {
+  margin-top: 15px;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 

@@ -1,5 +1,57 @@
 /***************************
 ****************************
+Responsive
+****************************
+***************************/
+.show-xs,
+.show-s,
+.show-m,
+.show-xl {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 1200px) {
+  .hide-xl {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .show-xl {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .hide-m {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .show-m {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hide-s {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .show-s {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (max-width: 767px) {
+  .hide-xs {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .show-xs {
+    display: block;
+    visibility: visible;
+  }
+}
+/***************************
+****************************
 Fonts
 ****************************
 ***************************/
@@ -200,6 +252,7 @@ Content Styles
 }
 .sidebar-menu ul li {
   border-bottom: 1px solid #e7e7e7;
+  margin-right: 23px;
 }
 .sidebar-menu ul li:last-child {
   border-bottom: none;
@@ -231,9 +284,14 @@ Content Styles
   position: absolute;
   height: 48px;
   top: 0;
-  left: -1414px;
+  left: -1437px;
   width: 1700px;
   z-index: -1;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .sidebar-menu ul li.active a .arrow {
+    left: -1487px;
+  }
 }
 .content-wrapper {
   box-shadow: 0 0 1px 0 #dcdcdc;
@@ -263,6 +321,10 @@ Manage Venue Details
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.form-item input,
+.form-item textarea {
+  resize: none;
+}
 .form-item input:focus,
 .form-item textarea:focus {
   border-color: #83c23f;
@@ -273,6 +335,13 @@ Manage Venue Details
 }
 .form-item input {
   height: 40px;
+}
+.map-wrapper {
+  margin-top: 15px;
+}
+.map-wrapper img {
+  width: 100%;
+  height: auto;
 }
 .content-section {
   margin-bottom: 30px;
