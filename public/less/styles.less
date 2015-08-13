@@ -383,11 +383,23 @@ Content Styles
 
 .sidebar-menu {
   ul {
+
+    @media @small {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
     li {
       .border-bottom(1px, @gray-5);
       margin-right: 23px;
 
       &:last-child {
+        border-bottom: none;
+      }
+
+      @media @small {
+        margin-right: 0;
+        display: inline-block;
         border-bottom: none;
       }
 
@@ -404,6 +416,16 @@ Content Styles
 
         .fa {
           margin-right: 15px;
+
+          @media @small {
+            margin-right: 12px;
+          }
+        }
+
+        @media @small {
+          height: 31px;
+          line-height: 31px;
+          padding: 0 20px;
         }
       }
 
@@ -412,6 +434,14 @@ Content Styles
 
         a {
           color: white;
+
+          @media @small {
+            background-color: @green-1;
+            margin: 0;
+            .border-radius(25px);
+            border-left: none;
+            border-right: none;
+          }
 
           .arrow {
             background: url("../images/arrow-1.png") no-repeat 0 0;
@@ -424,6 +454,10 @@ Content Styles
 
             @media @medium {
               left: -1487px;
+            }
+
+            @media @small {
+              display: none;
             }
           }
         }
@@ -598,11 +632,9 @@ Footer Styles
 ***************************/
 
 #footer {
-  margin-top: 15px;
-
   .logo-wrapper {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     .border-bottom(1px, @gray-5);
   }
 

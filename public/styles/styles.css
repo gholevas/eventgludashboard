@@ -250,12 +250,25 @@ Content Styles
   padding: 27px 0;
   overflow: hidden;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
 .sidebar-menu ul li {
   border-bottom: 1px solid #e7e7e7;
   margin-right: 23px;
 }
 .sidebar-menu ul li:last-child {
   border-bottom: none;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul li {
+    margin-right: 0;
+    display: inline-block;
+    border-bottom: none;
+  }
 }
 .sidebar-menu ul li a {
   font-family: 'proxima_nova_semibold';
@@ -273,11 +286,32 @@ Content Styles
 .sidebar-menu ul li a .fa {
   margin-right: 15px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul li a .fa {
+    margin-right: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul li a {
+    height: 31px;
+    line-height: 31px;
+    padding: 0 20px;
+  }
+}
 .sidebar-menu ul li.active {
   border-bottom: none;
 }
 .sidebar-menu ul li.active a {
   color: white;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul li.active a {
+    background-color: #83c23f;
+    margin: 0;
+    border-radius: 25px;
+    border-left: none;
+    border-right: none;
+  }
 }
 .sidebar-menu ul li.active a .arrow {
   background: url("../images/arrow-1.png") no-repeat 0 0;
@@ -291,6 +325,11 @@ Content Styles
 @media (min-width: 993px) and (max-width: 1200px) {
   .sidebar-menu ul li.active a .arrow {
     left: -1487px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu ul li.active a .arrow {
+    display: none;
   }
 }
 .content-wrapper {
@@ -480,12 +519,9 @@ Manage Venue Details
 Footer Styles
 ****************************
 ***************************/
-#footer {
-  margin-top: 15px;
-}
 #footer .logo-wrapper {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #e7e7e7;
 }
 #footer .bottom {
