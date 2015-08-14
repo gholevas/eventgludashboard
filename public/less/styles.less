@@ -352,6 +352,26 @@ Header Styles
     float: right;
     margin-left: 25px;
   }
+
+  .toggler-wrapper {
+    float: right;
+    cursor: pointer;
+    display: block;
+    font-size: 28px;
+    height: 64px;
+    line-height: 64px;
+  }
+}
+
+.toggler-wrapper {
+  .toggler {
+    color: @green-1;
+    cursor: pointer;
+
+    &:hover {
+      color: @green-2;
+    }
+  }
 }
 
 /***************************
@@ -545,10 +565,22 @@ Manage Venue Details
     & + div {
       padding-right: 0;
       width: 55%;
+
+      @media @xs {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
     }
 
-    label,
-    span {
+    @media @xs {
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+
+    > label,
+    > span {
       font-weight: 700;
       margin-bottom: 5px;
       display: inline-block;
@@ -567,6 +599,12 @@ Manage Venue Details
       &.n-m-b {
         background: none;
         padding: 0;
+      }
+
+      @media @xs {
+        margin-top: 15px;
+        padding-bottom: 0;
+        background: none;
       }
     }
   }
@@ -596,24 +634,29 @@ Manage Venue Details
     margin-bottom: 12px;
     line-height: 35px;
 
+    @media @xs {
+      float: none;
+      width: 100%;
+    }
+
     a {
       display: block;
       margin-right: 14px;
       float: left;
 
-      .icon {
+      .eg-icon {
         .white-icon;
       }
 
       &:hover
-      .icon {
+      .eg-icon {
         .green-icon;
       }
     }
 
     &.active {
       a {
-        .icon {
+        .eg-icon {
           .green-icon;
         }
       }
@@ -621,6 +664,16 @@ Manage Venue Details
 
     &:nth-last-of-type(-n+2) {
       margin-bottom: 0;
+
+      @media @xs {
+        margin-bottom: 12px;
+      }
+    }
+
+    &:last-child {
+      @media @xs {
+        margin-bottom: 0;
+      }
     }
   }
 }

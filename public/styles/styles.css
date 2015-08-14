@@ -228,6 +228,21 @@ Header Styles
   float: right;
   margin-left: 25px;
 }
+#header .toggler-wrapper {
+  float: right;
+  cursor: pointer;
+  display: block;
+  font-size: 28px;
+  height: 64px;
+  line-height: 64px;
+}
+.toggler-wrapper .toggler {
+  color: #83c23f;
+  cursor: pointer;
+}
+.toggler-wrapper .toggler:hover {
+  color: #74ab38;
+}
 /***************************
 ****************************
 Page Title Styles
@@ -398,8 +413,22 @@ Manage Venue Details
   padding-right: 0;
   width: 55%;
 }
-.content-section > div label,
-.content-section > div span {
+@media (max-width: 767px) {
+  .content-section > div + div {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .content-section > div {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+.content-section > div > label,
+.content-section > div > span {
   font-weight: 700;
   margin-bottom: 5px;
   display: inline-block;
@@ -418,6 +447,13 @@ Manage Venue Details
 .content-section > div.form-item.n-m-b {
   background: none;
   padding: 0;
+}
+@media (max-width: 767px) {
+  .content-section > div.form-item {
+    margin-top: 15px;
+    padding-bottom: 0;
+    background: none;
+  }
 }
 .content-section.button {
   margin: 0 -30px;
@@ -461,12 +497,18 @@ Manage Venue Details
   margin-bottom: 12px;
   line-height: 35px;
 }
+@media (max-width: 767px) {
+  .select-options > li {
+    float: none;
+    width: 100%;
+  }
+}
 .select-options > li a {
   display: block;
   margin-right: 14px;
   float: left;
 }
-.select-options > li a .icon {
+.select-options > li a .eg-icon {
   border: 1px solid #a7a7a7;
   color: #a7a7a7;
   width: 35px;
@@ -478,10 +520,10 @@ Manage Venue Details
   border-radius: 100%;
   vertical-align: middle;
 }
-.select-options > li a .icon > i {
+.select-options > li a .eg-icon > i {
   vertical-align: text-top;
 }
-.select-options > li a:hover .icon {
+.select-options > li a:hover .eg-icon {
   border: 1px solid #83c23f;
   color: white;
   width: 35px;
@@ -493,10 +535,10 @@ Manage Venue Details
   border-radius: 100%;
   vertical-align: middle;
 }
-.select-options > li a:hover .icon > i {
+.select-options > li a:hover .eg-icon > i {
   vertical-align: text-top;
 }
-.select-options > li.active a .icon {
+.select-options > li.active a .eg-icon {
   border: 1px solid #83c23f;
   color: white;
   width: 35px;
@@ -508,11 +550,21 @@ Manage Venue Details
   border-radius: 100%;
   vertical-align: middle;
 }
-.select-options > li.active a .icon > i {
+.select-options > li.active a .eg-icon > i {
   vertical-align: text-top;
 }
 .select-options > li:nth-last-of-type(-n+2) {
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .select-options > li:nth-last-of-type(-n+2) {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .select-options > li:last-child {
+    margin-bottom: 0;
+  }
 }
 /***************************
 ****************************
