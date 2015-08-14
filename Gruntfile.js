@@ -8,7 +8,8 @@ module.exports = function (grunt) {
           paths: ["public/styles"]
         },
         files: {
-          "public/styles/styles.css": "public/less/styles.less"
+          "public/styles/styles.css": "public/less/styles.less",
+          "public/styles/fonts.css": "public/less/fonts.less"
         }
       },
       production: {
@@ -17,7 +18,8 @@ module.exports = function (grunt) {
           cleancss: true
         },
         files: {
-          "public/styles/styles.css": "public/less/styles.less"
+          "public/styles/styles.css": "public/less/styles.less",
+          "public/styles/fonts.css": "public/less/fonts.less"
         }
       }
     },
@@ -30,6 +32,7 @@ module.exports = function (grunt) {
             'bower_components/font-awesome/css/font-awesome.min.css'
           ],
           'public/styles/styles.min.css': [
+            'public/styles/fonts.css',
             'public/styles/styles.css'
           ]
         }
