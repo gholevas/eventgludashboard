@@ -221,6 +221,49 @@ Header Styles
 .user .user-menu li a:hover {
   color: white;
 }
+.mobile-nav {
+  background-color: #282828;
+}
+.mobile-nav ul li a {
+  font-family: 'proxima_nova_semibold';
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  padding: 0 15px;
+  height: 64px;
+  line-height: 64px;
+}
+.mobile-nav ul li a:hover {
+  color: white;
+}
+.mobile-nav ul li.active a {
+  background-color: #83c23f;
+  color: white;
+}
+.mobile-nav .user {
+  border-top: 1px solid #3c3c3c;
+  background-color: black;
+  padding: 0;
+  height: auto;
+}
+.mobile-nav .user .link {
+  padding: 0 15px;
+}
+.mobile-nav .user .link > * {
+  float: none;
+  display: inline-block;
+}
+.mobile-nav .user .link > span {
+  cursor: default;
+  color: white;
+}
+.mobile-nav .user .user-menu {
+  position: static;
+}
+.mobile-nav .user .user-menu li:first-child {
+  border-top: 1px solid #3c3c3c;
+}
 #header {
   background-color: black;
   height: 65px;
@@ -252,6 +295,13 @@ Header Styles
 }
 .toggler-wrapper .toggler:hover {
   color: #74ab38;
+}
+#mobile-nav {
+  left: 0;
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  z-index: 10;
 }
 /***************************
 ****************************
