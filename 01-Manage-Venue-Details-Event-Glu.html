@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>01 Manage Venue Details Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav"><i
+            class="fa icon-menu_icon"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li class="active"><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h5>venue profile</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<nav id="mobile-sidebar-nav-wrapper" class="mobile-sidebar-menu show-xs">
+  <span class="mobile-sidebar-menu-toggler collapsed" data-toggle="collapse" data-target="#mobile-sidebar-nav">
+    <i class="fa icon-details_icon"></i> Details</a>
+    <span><i class="fa fa-caret-down"></i></span>
+  </span>
+  <ul id="mobile-sidebar-nav" class="list-unstyled collapse hide-s hide-m hide-xl">
+    <li><a href=""><i class="fa icon-details_icon"></i> Details</a></li>
+    <li><a href=""><i class="fa icon-photos_icon"></i> Photos</a></li>
+    <li><a href=""><i class="fa icon-menu_icon"></i> Menu</a></li>
+    <li><a href=""><i class="fa icon-room_icon"></i> Room Types</a></li>
+  </ul>
+</nav>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 hide-xs">
+        <div class="sidebar-menu">
+          <ul class="list-unstyled">
+            <li class="active"><a href=""><span class="arrow"></span><i class="fa icon-details_icon"></i> Details</a>
+            </li>
+            <li><a href=""><span class="arrow"></span><i class="fa icon-photos_icon"></i> Photos</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa icon-menu_icon"></i> Menu</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa icon-room_icon"></i> Room Types</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="content-wrapper">
+          <div class="title">
+            <h5>basic information</h5>
+          </div>
+          <div class="content">
+            <form action="">
+              <section class="content-section clearfix">
+                <div>
+                  <label for="">Venue Name</label>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item">
+                  <input type="text" class="form-control"/>
+                </div>
+              </section>
+              <section class="content-section clearfix">
+                <div>
+                  <label for="">Venue Description</label>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item">
+                  <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+              </section>
+              <section class="content-section clearfix">
+                <div>
+                  <label for="">Venue Location</label>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item">
+                  <input type="text" class="form-control"/>
+
+                  <div class="map-wrapper">
+                    <img src="public/images/content/map.png" alt=""/>
+                  </div>
+                </div>
+              </section>
+              <section class="content-section clearfix">
+                <div>
+                  <span>Establishment Type</span>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item">
+                  <ul class="list-unstyled select-options clearfix">
+                    <li class="active"><a href=""><span class="eg-icon"><i class="fa icon-celebration_icon"></i></span></a>
+                      Celebration
+                    </li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-reception_icon"></i></span></a> Reception</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-ceremony_icon"></i></span></a> Ceremony</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-seatedmeal_icon"></i></span></a> Seated Meal</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-conference_icon"></i></span></a> Conference</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-receptionseatedmeal_icon"></i></span></a> Reception &amp;
+                      Seated Meal
+                    </li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-corporate_icon"></i></span></a> Corporate</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-wedding_icon"></i></span></a> Wedding</li>
+                  </ul>
+                </div>
+              </section>
+              <section class="content-section clearfix">
+                <div>
+                  <span>Events Allowed</span>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item n-m-b">
+                  <ul class="list-unstyled select-options clearfix">
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-bar_icon"></i></span></a> Bar</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-catering_icon"></i></span></a> Catering Hall
+                    </li>
+                    <li class="active"><a href=""><span class="eg-icon"><i class="fa icon-lounge_icon"></i></span></a>
+                      Lounge
+                    </li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-hotel_icon"></i></span></a> Hotel</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-nightclub_icon"></i></span></a> Nightclub</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-restaurant_icon"></i></span></a> Restaurant</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-rooftop_icon"></i></span></a> Rooftop</li>
+                    <li><a href=""><span class="eg-icon"><i class="fa icon-rawspace_icon"></i></span></a> Raw Space</li>
+                  </ul>
+                </div>
+              </section>
+              <section class="content-section button clearfix">
+                <button type="submit" class="eg-btn btn-main">Save</button>
+              </section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>
