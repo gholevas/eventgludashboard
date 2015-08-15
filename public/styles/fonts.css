@@ -18,3 +18,131 @@ Fonts
   font-style: normal;
   font-variant: normal;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?xo6xl3');
+  src: url('fonts/icomoon.eot?#iefixxo6xl3') format('embedded-opentype'), url('fonts/icomoon.ttf?xo6xl3') format('truetype'), url('fonts/icomoon.woff?xo6xl3') format('woff'), url('fonts/icomoon.svg?xo6xl3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-bar_icon:before {
+  content: "\e600";
+}
+.icon-calendar_icon:before {
+  content: "\e601";
+}
+.icon-catering_icon:before {
+  content: "\e602";
+}
+.icon-celebration_icon:before {
+  content: "\e603";
+}
+.icon-ceremony_icon:before {
+  content: "\e604";
+}
+.icon-chat_icon:before {
+  content: "\e605";
+}
+.icon-client_icon:before {
+  content: "\e606";
+}
+.icon-clock_icon:before {
+  content: "\e607";
+}
+.icon-conference_icon:before {
+  content: "\e608";
+}
+.icon-corporate_icon:before {
+  content: "\e609";
+}
+.icon-delete_icon:before {
+  content: "\e60a";
+}
+.icon-details_icon:before {
+  content: "\e60b";
+}
+.icon-eventdetails_icon:before {
+  content: "\e60c";
+}
+.icon-guests_icon:before {
+  content: "\e60d";
+}
+.icon-hotel_icon:before {
+  content: "\e60e";
+}
+.icon-leads_icon:before {
+  content: "\e60f";
+}
+.icon-lounge_icon:before {
+  content: "\e610";
+}
+.icon-menu_icon:before {
+  content: "\e611";
+}
+.icon-nightclub_icon:before {
+  content: "\e612";
+}
+.icon-notes_icon:before {
+  content: "\e613";
+}
+.icon-notifications_icon:before {
+  content: "\e614";
+}
+.icon-past_icon:before {
+  content: "\e615";
+}
+.icon-photos_icon:before {
+  content: "\e616";
+}
+.icon-rawspace_icon:before {
+  content: "\e617";
+}
+.icon-reception_icon:before {
+  content: "\e618";
+}
+.icon-receptionseatedmeal_icon:before {
+  content: "\e619";
+}
+.icon-restaurant_icon:before {
+  content: "\e61a";
+}
+.icon-rooftop_icon:before {
+  content: "\e61b";
+}
+.icon-room_icon:before {
+  content: "\e61c";
+}
+.icon-seated_icon:before {
+  content: "\e61d";
+}
+.icon-seatedmeal_icon:before {
+  content: "\e61e";
+}
+.icon-standing_icon:before {
+  content: "\e61f";
+}
+.icon-summary_icon:before {
+  content: "\e620";
+}
+.icon-upcoming_icon:before {
+  content: "\e621";
+}
+.icon-views_icon:before {
+  content: "\e622";
+}
+.icon-wedding_icon:before {
+  content: "\e623";
+}

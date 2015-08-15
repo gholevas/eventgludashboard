@@ -264,6 +264,59 @@ Header Styles
 .mobile-nav .user .user-menu li:first-child {
   border-top: 1px solid #3c3c3c;
 }
+.mobile-sidebar-menu {
+  background-color: #83c23f;
+  padding: 0 15px;
+}
+.mobile-sidebar-menu .mobile-sidebar-menu-toggler,
+.mobile-sidebar-menu a {
+  font-family: 'proxima_nova_semibold';
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  height: 62px;
+  line-height: 61px;
+}
+.mobile-sidebar-menu .mobile-sidebar-menu-toggler:hover,
+.mobile-sidebar-menu a:hover {
+  color: white;
+}
+.mobile-sidebar-menu .mobile-sidebar-menu-toggler {
+  cursor: pointer;
+  color: white;
+}
+.mobile-sidebar-menu .mobile-sidebar-menu-toggler > .fa {
+  margin-right: 13px;
+}
+.mobile-sidebar-menu .mobile-sidebar-menu-toggler > span {
+  margin-top: 21px;
+  background-color: white;
+  color: #83c23f;
+  display: block;
+  float: right;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 34px;
+  border-radius: 25px;
+}
+.mobile-sidebar-menu ul {
+  background-color: #83c23f;
+  padding: 0 15px;
+}
+.mobile-sidebar-menu ul li {
+  border-bottom: 1px solid #77b139;
+}
+.mobile-sidebar-menu ul li:first-child {
+  border-top: 1px solid #77b139;
+}
+.mobile-sidebar-menu ul li:last-child {
+  border-bottom: none;
+}
+.mobile-sidebar-menu ul li a > .fa {
+  margin-right: 13px;
+}
 #header {
   background-color: black;
   height: 65px;
@@ -302,6 +355,17 @@ Header Styles
   top: 65px;
   width: 100%;
   z-index: 10;
+}
+#mobile-sidebar-nav-wrapper {
+  position: relative;
+  z-index: 10;
+}
+#mobile-sidebar-nav-wrapper #mobile-sidebar-nav {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
 }
 /***************************
 ****************************
