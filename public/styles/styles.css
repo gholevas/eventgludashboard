@@ -82,16 +82,24 @@ h6 {
   line-height: normal;
   color: #636363;
 }
-a {
+a,
+button {
   color: #83c23f;
+  background: none;
+  border: none;
 }
-a:hover {
+a:hover,
+button:hover {
   color: #74ab38;
 }
 a:hover,
+button:hover,
 a:visited,
+button:visited,
 a:active,
-a:focus {
+button:active,
+a:focus,
+button:focus {
   text-decoration: none;
   outline: none;
 }
@@ -140,6 +148,17 @@ Button & Links Styles
 .eg-btn.btn-transparent:active,
 .eg-btn.btn-transparent:focus {
   background-color: black;
+}
+.eg-btn.btn-white {
+  color: black;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 29px;
+  border-radius: 25px;
+  border: 1px solid #d2d2d2;
+}
+.eg-btn.btn-white:hover {
+  background-color: #d2d2d2;
 }
 /***************************
 ****************************
@@ -813,7 +832,7 @@ Photos Styles
   width: 100%;
   height: auto;
 }
-.photo-container .img-wrapper a {
+.photo-container .img-wrapper button {
   font-family: 'proxima_nova_semibold';
   font-size: 13px;
   text-transform: uppercase;
@@ -822,6 +841,7 @@ Photos Styles
   bottom: 40px;
   left: 0;
   width: 100%;
+  border: none;
 }
 .photo-container.empty .img-wrapper {
   height: 192px;
@@ -853,4 +873,65 @@ Photos Styles
 }
 .photo-container.active .img-wrapper .profile-selector {
   background-position: 0 0;
+}
+/***************************
+****************************
+Modal Styles
+****************************
+***************************/
+#add-photos-modal .modal-dialog {
+  width: 624px;
+}
+@media (max-width: 767px) {
+  #add-photos-modal .modal-dialog {
+    width: auto;
+  }
+}
+.my-modal {
+  background-color: white;
+  border: 1px solid #e3e3e3;
+}
+.my-modal .my-modal-title {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 22px 40px;
+}
+.my-modal .my-modal-title h5 {
+  text-transform: uppercase;
+}
+.my-modal .my-modal-content {
+  padding: 0 40px;
+}
+.add-photos {
+  padding-bottom: 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #636363;
+}
+.add-photos .text {
+  padding: 80px 0;
+  font-size: 21px;
+}
+@media (max-width: 767px) {
+  .add-photos .text {
+    font-size: 17px;
+  }
+}
+.add-photos .text p {
+  margin-bottom: 0;
+}
+.add-photos .sep {
+  left: 50%;
+  margin-left: -500px;
+  position: absolute;
+  top: 195px;
+}
+.add-photos span {
+  display: block;
+  font-size: 13px;
+}
+.add-photos .btn-white {
+  margin-top: 67px;
+  margin-bottom: 23px;
 }

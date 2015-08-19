@@ -98,8 +98,8 @@
         <div class="content-wrapper">
           <div class="title clearfix">
             <h5>venue Photos</h5>
-            <a href="" class="eg-btn btn-main hide-xs">Add Photos</a>
-            <a href="" class="eg-btn btn-main show-xs">Add</a>
+            <button class="eg-btn btn-main hide-xs" data-toggle="modal" data-target="#add-photos-modal">Add Photos</button>
+            <button class="eg-btn btn-main show-xs" data-toggle="modal" data-target="#add-photos-modal">Add</button>
           </div>
           <div class="content">
             <div class="photos-wrapper">
@@ -148,7 +148,7 @@
                 </div>
                 <div class="photo-container empty">
                   <div class="img-wrapper">
-                    <a href="">+ add photos</a>
+                    <button data-toggle="modal" data-target="#add-photos-modal">+ add photos</button>
                   </div>
                   <textarea class="form-control" name="" cols="30" rows="10" placeholder="Photo Highlights"></textarea>
                 </div>
@@ -160,6 +160,23 @@
     </div>
   </div>
 </section>
+<div class="modal fade" id="add-photos-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="my-modal">
+      <div class="my-modal-title">
+        <h5>Add Photos</h5>
+      </div>
+      <div class="my-modal-content">
+        <div class="add-photos">
+          <div class="text"><p>Drop files anywhere to upload</p></div>
+          <img class="sep" src="public/images/sep-2.png" alt=""/>
+          <a href="" class="eg-btn btn-white">Select Files</a>
+          <span>Max upload file size: 2MB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <footer id="footer">
   <div class="container">
     <div class="row">
