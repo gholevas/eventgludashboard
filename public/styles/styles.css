@@ -160,6 +160,19 @@ Button & Links Styles
 .eg-btn.btn-white:hover {
   background-color: #d2d2d2;
 }
+.eg-btn.btn-4 {
+  background-color: white;
+  color: #83c23f;
+  border-radius: 25px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  box-shadow: 0 0 1px 0 #d3d3d3;
+}
+.eg-btn.btn-4:hover {
+  background-color: #83c23f;
+  color: white;
+}
 /***************************
 ****************************
 Header Styles
@@ -419,6 +432,43 @@ Page Title Styles
 #page-title h5 {
   text-transform: uppercase;
 }
+#page-title.single-menu {
+  background-color: #e2e2e2;
+  border-bottom: 1px solid white;
+  padding: 0;
+  height: 75px;
+}
+#page-title.single-menu .menu-meta {
+  float: left;
+  margin-top: 11px;
+  width: 200px;
+}
+#page-title.single-menu .btn-4 {
+  float: right;
+  margin-top: 22px;
+}
+.menu-meta {
+  height: 54px;
+}
+.menu-meta > img {
+  border-radius: 100%;
+  margin-right: 14px;
+  float: left;
+}
+.menu-meta .price,
+.menu-meta .name {
+  font-family: 'proxima_nova_semibold';
+  font-weight: normal;
+  display: block;
+  text-transform: uppercase;
+}
+.menu-meta .name {
+  padding-top: 8px;
+  font-size: 15px;
+}
+.menu-meta .price {
+  font-size: 13px;
+}
 /***************************
 ****************************
 Content Styles
@@ -428,15 +478,19 @@ Content Styles
   padding: 27px 0;
   overflow: hidden;
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .sidebar-menu ul {
-    margin-bottom: 16px;
-    text-align: center;
+    margin-bottom: 27px;
   }
 }
 .sidebar-menu ul li {
   border-bottom: 1px solid #e7e7e7;
   margin-right: 23px;
+}
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
+  .sidebar-menu ul li:first-child a {
+    padding-left: 0;
+  }
 }
 .sidebar-menu ul li:last-child {
   border-bottom: none;
@@ -462,14 +516,9 @@ Content Styles
   color: #83c23f;
 }
 .sidebar-menu ul li a .fa {
-  margin-right: 15px;
+  margin-right: 8px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .sidebar-menu ul li a .fa {
-    margin-right: 12px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .sidebar-menu ul li a {
     height: 31px;
     line-height: 31px;
@@ -509,6 +558,21 @@ Content Styles
   .sidebar-menu ul li.active a .arrow {
     display: none;
   }
+}
+.sidebar-menu.inner ul li:last-child {
+  border-bottom: 1px solid #e7e7e7;
+  margin: 0;
+}
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
+  .sidebar-menu.inner ul li:last-child {
+    border-bottom: none;
+  }
+}
+.sidebar-menu.inner ul li:last-child a {
+  color: #83c23f;
+}
+.sidebar-menu.inner ul li:last-child a:hover {
+  color: #74ab38;
 }
 .content-wrapper {
   box-shadow: 0 0 1px 0 #dcdcdc;
@@ -998,4 +1062,18 @@ Menu Styles
 }
 .menu-items .menu-item .controls a.remove:hover {
   color: #da5d20;
+}
+.menu-items.single .menu-item .data,
+.menu-items.single .menu-item > .price {
+  line-height: 32px;
+}
+.menu-items.single .menu-item > .price {
+  float: right;
+  margin-right: 100px;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .menu-items.single .menu-item > .price {
+    display: none;
+  }
 }

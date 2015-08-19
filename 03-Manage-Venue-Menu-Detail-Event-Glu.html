@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>03 Manage Venue Menu Main Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav">
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li class="active"><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title" class="single-menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="menu-meta">
+          <img src="public/images/content/menu.png" alt=""/>
+          <strong class="name">Food menu 1</strong>
+          <span class="price">$25 / person</span>
+        </div>
+
+        <a href="" class="eg-btn btn-4 hide-xs">edit menu name / pricing</a>
+        <a href="" class="eg-btn btn-4 show-xs">edit</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="sidebar-menu inner">
+          <ul class="list-unstyled">
+            <li><a href=""><span class="arrow"></span><i class="fa fa-chevron-left"></i> Back to menus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="content-wrapper">
+          <div class="food-container">
+            <div class="title clearfix">
+              <h5>food menu 1</h5>
+              <button class="eg-btn btn-main hide-xs">add item menu</button>
+              <button class="eg-btn btn-main show-xs">add</button>
+            </div>
+            <div class="content">
+              <ul class="list-unstyled menu-items single clearfix">
+                <li class="menu-item clearfix">
+                  <div class="data">
+                    <strong class="name">Food Item 1</strong>
+                  </div>
+                  <div class="controls">
+                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
+                  </div>
+                  <div class="price">
+                    <span class="price">Included</span>
+                  </div>
+                </li>
+                <li class="menu-item clearfix">
+                  <div class="data">
+                    <strong class="name">Food Item 1</strong>
+                  </div>
+                  <div class="controls">
+                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
+                  </div>
+                  <div class="price">
+                    <span class="price">Included</span>
+                  </div>
+                </li>
+                <li class="menu-item clearfix">
+                  <div class="data">
+                    <strong class="name">Food Item 1</strong>
+                  </div>
+                  <div class="controls">
+                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
+                  </div>
+                  <div class="price">
+                    <span class="price">Included</span>
+                  </div>
+                </li>
+                <li class="menu-item clearfix">
+                  <div class="data">
+                    <strong class="name">Food Item 1</strong>
+                  </div>
+                  <div class="controls">
+                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
+                  </div>
+                  <div class="price">
+                    <span class="price">$5 Extra</span>
+                  </div>
+                </li>
+                <li class="menu-item clearfix">
+                  <div class="data">
+                    <strong class="name">Food Item 1</strong>
+                  </div>
+                  <div class="controls">
+                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
+                  </div>
+                  <div class="price">
+                    <span class="price">$5 Extra</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>
