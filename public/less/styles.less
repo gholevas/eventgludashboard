@@ -536,7 +536,7 @@ Header Styles
 
 #mobile-sidebar-nav-wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 15;
 
   #mobile-sidebar-nav {
     position: absolute;
@@ -931,12 +931,26 @@ Photos Styles
     margin-right: 22px;
   }
 
+  @media @small {
+    margin-right: 33px;
+  }
+
+  @media @xs {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
   .img-wrapper {
     background: url("../images/bg-empty-image.png") no-repeat 50% 43px;
     overflow: hidden;
     .border(1px, @gray-14);
     height: 190px;
     position: relative;
+
+    @media @xs {
+      height: auto;
+    }
 
     .profile-selector {
       background: url("../images/bg-profile-pic.png") no-repeat 0 -53px;
@@ -963,6 +977,12 @@ Photos Styles
       bottom: 40px;
       left: 0;
       width: 100%;
+    }
+  }
+
+  &.empty {
+    .img-wrapper {
+      height: 192px;
     }
   }
 
