@@ -1,5 +1,7 @@
 @bg-color: #f3f3f3;
 
+@black-1: rgba(0, 0, 0, 0.8);
+
 @green-1: #83c23f;
 @green-2: #74ab38;
 @green-3: #77b139;
@@ -17,8 +19,11 @@
 @gray-11: #c1c1c1;
 @gray-12: #3c3c3c;
 @gray-13: #282828;
+@gray-14: #d2d2d2;
 
 @white-1: rgba(255, 255, 255, 0.7);
+
+@one-third: percentage(1/3);
 
 /***************************
 ****************************
@@ -149,6 +154,12 @@ h1, h2, h3, h4, h5, h6 {
   color: @gray-9;
 }
 
+.font-settings-2 {
+  font-size: 14px;
+  line-height: normal;
+  color: @gray-9;
+}
+
 .icon(@size, @bg-color, @color) {
   color: @color;
   width: @size;
@@ -213,6 +224,24 @@ Button & Links Styles
     &:active,
     &:focus {
       background-color: @green-2;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: @black-1;
+    .border-radius(25px);
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    font-size: 13px;
+    padding: 0 10px;
+
+    &:link
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: black;
     }
   }
 }
@@ -507,7 +536,7 @@ Header Styles
 
 #mobile-sidebar-nav-wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 15;
 
   #mobile-sidebar-nav {
     position: absolute;
@@ -643,12 +672,22 @@ Content Styles
 
 .title {
   background-color: @gray-8;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   .border-bottom(1px, @gray-7);
 
   h5 {
     text-transform: uppercase;
+    float: left;
+    line-height: 32px;
+  }
+
+  .btn-main {
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    padding: 0 24px;
   }
 }
 
@@ -664,16 +703,16 @@ Manage Venue Details
   padding-bottom: 30px;
 }
 
-.form-item {
-  input,
-  textarea {
-    resize: none;
+.form-control {
+  resize: none;
 
-    &:focus {
-      border-color: @green-1;
-      .box-shadow(3px, @green-1);
-    }
+  &:focus {
+    border-color: @green-1;
+    .box-shadow(3px, @green-1);
   }
+}
+
+.form-item {
 
   textarea {
     height: 95px;
@@ -859,6 +898,128 @@ Footer Styles
 
       & + p {
         float: right;
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Photos Styles
+****************************
+***************************/
+
+.photos-wrapper {
+  p {
+    .font-settings-2;
+    margin: 0;
+  }
+}
+
+.photos-container {
+  margin-top: 30px;
+}
+
+.photo-container {
+  width: 197px;
+  float: left;
+  margin-right: 97px;
+  margin-bottom: 14px;
+  position: relative;
+
+  @media @medium {
+    margin-right: 22px;
+  }
+
+  @media @small {
+    margin-right: 33px;
+  }
+
+  @media @xs {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
+  .img-wrapper {
+    background: url("../images/bg-empty-image.png") no-repeat 50% 43px;
+    overflow: hidden;
+    .border(1px, @gray-14);
+    height: 190px;
+    position: relative;
+
+    @media @xs {
+      height: auto;
+    }
+
+    .profile-selector {
+      background: url("../images/bg-profile-pic.png") no-repeat 0 -53px;
+      position: absolute;
+      z-index: 10;
+      height: 53px;
+      width: 53px;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      font-family: 'proxima_nova_semibold';
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.empty {
+    .img-wrapper {
+      height: 192px;
+    }
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  textarea {
+    margin-top: 11px;
+    height: 60px;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .btn-main {
+    margin-top: 14px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+    padding: 0 19px;
+    opacity: 0;
+  }
+
+  .btn-transparent {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  &.active {
+    .img-wrapper {
+      .profile-selector {
+        background-position: 0 0;
       }
     }
   }
