@@ -106,6 +106,7 @@ General Styles
 
 body {
   background-color: @bg-color;
+  color: @gray-6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -275,6 +276,21 @@ Button & Links Styles
     line-height: 32px;
     padding: 0 20px;
     .box-shadow(1px, @gray-17);
+
+    &:hover {
+      background-color: @green-1;
+      color: white;
+    }
+  }
+
+  &.btn-white-green {
+    background-color: white;
+    color: @green-1;
+    .border-radius(25px);
+    height: 32px;
+    line-height: 32px;
+    padding: 0 20px;
+    .border(1px, @green-1);
 
     &:hover {
       background-color: @green-1;
@@ -812,12 +828,94 @@ Manage Venue Details
   padding-bottom: 30px;
 }
 
+.form-group {
+  label {
+    font-weight: normal;
+  }
+
+  &.double {
+    > div {
+      float: left;
+
+      &.input {
+        margin-right: 16px;
+        width: 220px;
+
+        @media @xs {
+          width: 100%;
+        }
+      }
+
+      &.dropdown {
+        margin-top: 25px;
+        width: 177px;
+
+        @media @xs {
+          width: 100%;
+        }
+
+        .btn-default {
+          width: 100%;
+          position: relative;
+          text-align: left;
+
+          &:hover,
+          &:visited,
+          &:active,
+          &:focus {
+            background-color: white;
+          }
+
+          .fa {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+          }
+        }
+
+        &.open {
+          .btn-default {
+            border-color: @green-1;
+            .box-shadow(3px, @green-1);
+            background-color: white;
+          }
+        }
+
+        ul {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.file-upload {
+    .file {
+      .btn-white-green {
+        height: 38px;
+        line-height: 38px;
+      }
+
+      span {
+        color: @gray-9;
+        display: inline-block;
+        line-height: 38px;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
 .form-control {
   resize: none;
 
   &:focus {
     border-color: @green-1;
     .box-shadow(3px, @green-1);
+  }
+
+  &.money {
+    background: url("../images/ico-dollars.png") no-repeat 15px 50%;
+    padding-left: 35px;
   }
 }
 
@@ -1151,6 +1249,60 @@ Modal Styles
   }
 }
 
+#add-food-menu-modal {
+  width: 415px;
+
+  @media @xs {
+    width: auto;
+  }
+
+  .modal-dialog {
+    width: 415px;
+
+    @media @xs {
+      width: auto;
+    }
+  }
+}
+
+#add-food-item-modal {
+  width: 475px;
+
+  @media @xs {
+    width: auto;
+  }
+
+  .modal-dialog {
+    width: 475px;
+
+    @media @xs {
+      width: auto;
+    }
+  }
+
+  .file-upload {
+    .file {
+      margin-top: 10px;
+
+      .btn-white-green {
+        width: 131px;
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .my-modal-form-btn-wrapper {
+    margin: 0 -30px;
+
+    .btn-main {
+      width: 131px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
 .my-modal {
   background-color: white;
   .border(1px, @gray-15);
@@ -1158,7 +1310,7 @@ Modal Styles
   .my-modal-title {
     background-color: @gray-8;
     .border-bottom(1px, @gray-15);
-    padding: 22px 40px;
+    padding: 22px 30px;
 
     h5 {
       text-transform: uppercase;
@@ -1166,7 +1318,7 @@ Modal Styles
   }
 
   .my-modal-content {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 }
 
@@ -1205,6 +1357,33 @@ Modal Styles
   .btn-white {
     margin-top: 67px;
     margin-bottom: 23px;
+  }
+}
+
+.my-modal-form {
+  padding: 25px 0;
+
+  .form-group {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    textarea {
+      height: 75px;
+    }
+  }
+
+  .btn-main {
+    font-size: 15px;
+  }
+}
+
+.my-modal-form-btn-wrapper {
+  .border-top(1px, @gray-15);
+  padding: 22px 30px;
+
+  .btn-main {
+    font-size: 15px;
   }
 }
 

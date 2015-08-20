@@ -57,6 +57,7 @@ General Styles
 ***************************/
 body {
   background-color: #f3f3f3;
+  color: #363636;
 }
 h1,
 h2,
@@ -170,6 +171,19 @@ Button & Links Styles
   box-shadow: 0 0 1px 0 #d3d3d3;
 }
 .eg-btn.btn-4:hover {
+  background-color: #83c23f;
+  color: white;
+}
+.eg-btn.btn-white-green {
+  background-color: white;
+  color: #83c23f;
+  border-radius: 25px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  border: 1px solid #83c23f;
+}
+.eg-btn.btn-white-green:hover {
   background-color: #83c23f;
   color: white;
 }
@@ -612,12 +626,74 @@ Manage Venue Details
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.form-group label {
+  font-weight: normal;
+}
+.form-group.double > div {
+  float: left;
+}
+.form-group.double > div.input {
+  margin-right: 16px;
+  width: 220px;
+}
+@media (max-width: 767px) {
+  .form-group.double > div.input {
+    width: 100%;
+  }
+}
+.form-group.double > div.dropdown {
+  margin-top: 25px;
+  width: 177px;
+}
+@media (max-width: 767px) {
+  .form-group.double > div.dropdown {
+    width: 100%;
+  }
+}
+.form-group.double > div.dropdown .btn-default {
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+.form-group.double > div.dropdown .btn-default:hover,
+.form-group.double > div.dropdown .btn-default:visited,
+.form-group.double > div.dropdown .btn-default:active,
+.form-group.double > div.dropdown .btn-default:focus {
+  background-color: white;
+}
+.form-group.double > div.dropdown .btn-default .fa {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+.form-group.double > div.dropdown.open .btn-default {
+  border-color: #83c23f;
+  box-shadow: 0 0 3px 0 #83c23f;
+  background-color: white;
+}
+.form-group.double > div.dropdown ul {
+  width: 100%;
+}
+.form-group.file-upload .file .btn-white-green {
+  height: 38px;
+  line-height: 38px;
+}
+.form-group.file-upload .file span {
+  color: #636363;
+  display: inline-block;
+  line-height: 38px;
+  margin-left: 12px;
+}
 .form-control {
   resize: none;
 }
 .form-control:focus {
   border-color: #83c23f;
   box-shadow: 0 0 3px 0 #83c23f;
+}
+.form-control.money {
+  background: url("../images/ico-dollars.png") no-repeat 15px 50%;
+  padding-left: 35px;
 }
 .form-item textarea {
   height: 95px;
@@ -952,6 +1028,54 @@ Modal Styles
     width: auto;
   }
 }
+#add-food-menu-modal {
+  width: 415px;
+}
+@media (max-width: 767px) {
+  #add-food-menu-modal {
+    width: auto;
+  }
+}
+#add-food-menu-modal .modal-dialog {
+  width: 415px;
+}
+@media (max-width: 767px) {
+  #add-food-menu-modal .modal-dialog {
+    width: auto;
+  }
+}
+#add-food-item-modal {
+  width: 475px;
+}
+@media (max-width: 767px) {
+  #add-food-item-modal {
+    width: auto;
+  }
+}
+#add-food-item-modal .modal-dialog {
+  width: 475px;
+}
+@media (max-width: 767px) {
+  #add-food-item-modal .modal-dialog {
+    width: auto;
+  }
+}
+#add-food-item-modal .file-upload .file {
+  margin-top: 10px;
+}
+#add-food-item-modal .file-upload .file .btn-white-green {
+  width: 131px;
+  padding: 0;
+  text-align: center;
+}
+#add-food-item-modal .my-modal-form-btn-wrapper {
+  margin: 0 -30px;
+}
+#add-food-item-modal .my-modal-form-btn-wrapper .btn-main {
+  width: 131px;
+  padding: 0;
+  text-align: center;
+}
 .my-modal {
   background-color: white;
   border: 1px solid #e3e3e3;
@@ -959,13 +1083,13 @@ Modal Styles
 .my-modal .my-modal-title {
   background-color: #f9f9f9;
   border-bottom: 1px solid #e3e3e3;
-  padding: 22px 40px;
+  padding: 22px 30px;
 }
 .my-modal .my-modal-title h5 {
   text-transform: uppercase;
 }
 .my-modal .my-modal-content {
-  padding: 0 40px;
+  padding: 0 30px;
 }
 .add-photos {
   padding-bottom: 80px;
@@ -999,6 +1123,25 @@ Modal Styles
 .add-photos .btn-white {
   margin-top: 67px;
   margin-bottom: 23px;
+}
+.my-modal-form {
+  padding: 25px 0;
+}
+.my-modal-form .form-group:last-child {
+  margin-bottom: 0;
+}
+.my-modal-form .form-group textarea {
+  height: 75px;
+}
+.my-modal-form .btn-main {
+  font-size: 15px;
+}
+.my-modal-form-btn-wrapper {
+  border-top: 1px solid #e3e3e3;
+  padding: 22px 30px;
+}
+.my-modal-form-btn-wrapper .btn-main {
+  font-size: 15px;
 }
 /***************************
 ****************************
