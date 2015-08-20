@@ -1028,50 +1028,34 @@ Modal Styles
     width: auto;
   }
 }
-#add-food-menu-modal {
+.add-food-modal .modal-dialog {
   width: 415px;
 }
 @media (max-width: 767px) {
-  #add-food-menu-modal {
+  .add-food-modal .modal-dialog {
     width: auto;
   }
 }
-#add-food-menu-modal .modal-dialog {
-  width: 415px;
-}
-@media (max-width: 767px) {
-  #add-food-menu-modal .modal-dialog {
-    width: auto;
-  }
-}
-#add-food-item-modal {
+.add-food-item-modal .modal-dialog {
   width: 475px;
 }
 @media (max-width: 767px) {
-  #add-food-item-modal {
+  .add-food-item-modal .modal-dialog {
     width: auto;
   }
 }
-#add-food-item-modal .modal-dialog {
-  width: 475px;
-}
-@media (max-width: 767px) {
-  #add-food-item-modal .modal-dialog {
-    width: auto;
-  }
-}
-#add-food-item-modal .file-upload .file {
+.add-food-item-modal .file-upload .file {
   margin-top: 10px;
 }
-#add-food-item-modal .file-upload .file .btn-white-green {
+.add-food-item-modal .file-upload .file .btn-white-green {
   width: 131px;
   padding: 0;
   text-align: center;
 }
-#add-food-item-modal .my-modal-form-btn-wrapper {
+.add-food-item-modal .my-modal-form-btn-wrapper {
   margin: 0 -30px;
 }
-#add-food-item-modal .my-modal-form-btn-wrapper .btn-main {
+.add-food-item-modal .my-modal-form-btn-wrapper .btn-main {
   width: 131px;
   padding: 0;
   text-align: center;
