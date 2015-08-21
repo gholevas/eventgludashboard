@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="eventsGlue">
 <head>
-  <title>03 Manage Venue Menu Main Event Glü</title>
+  <title>04 Manage Venue Room Main Event Glü</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="public/styles/libs.min.css">
@@ -60,29 +60,38 @@
     </ul>
   </div>
 </nav>
-<section id="page-title" class="single-menu">
+<section id="page-title">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="menu-meta">
-          <img src="public/images/content/menu.png" alt=""/>
-          <strong class="name">Food menu 1</strong>
-          <span class="price">$25 / person</span>
-        </div>
-
-        <button class="eg-btn btn-4 hide-xs" data-toggle="modal" data-target="#edit-food-menu-modal">edit menu name / pricing</button>
-        <button class="eg-btn btn-4 show-xs" data-toggle="modal" data-target="#edit-food-menu-modal">edit</button>
+        <h5>venue profile</h5>
       </div>
     </div>
   </div>
 </section>
+<nav id="mobile-sidebar-nav-wrapper" class="mobile-sidebar-menu show-xs">
+  <span class="mobile-sidebar-menu-toggler collapsed" data-toggle="collapse" data-target="#mobile-sidebar-nav">
+    <i class="fa fa-fw icon-room_icon"></i> Room Types
+    <span><i class="fa fa-caret-down"></i></span>
+  </span>
+  <ul id="mobile-sidebar-nav" class="list-unstyled collapse hide-s hide-m hide-xl">
+    <li><a href=""><i class="fa fa-fw icon-details_icon"></i> Details</a></li>
+    <li><a href=""><i class="fa fa-fw icon-photos_icon"></i> Photos</a></li>
+    <li><a href=""><i class="fa fa-fw icon-menu_icon"></i> Menu</a></li>
+    <li><a href=""><i class="fa fa-fw icon-room_icon"></i> Room Types</a></li>
+  </ul>
+</nav>
 <section id="content">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <div class="sidebar-menu inner">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 hide-xs">
+        <div class="sidebar-menu">
           <ul class="list-unstyled">
-            <li><a href=""><span class="arrow"></span><i class="fa fa-chevron-left"></i> Back to menus</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa fw icon-details_icon"></i> Details</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa fw icon-photos_icon"></i> Photos</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa fw icon-menu_icon"></i> Menu</a></li>
+            <li class="active"><a href=""><span class="arrow"></span><i class="fa fw icon-room_icon"></i> Room Types</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -90,65 +99,51 @@
         <div class="content-wrapper">
           <div class="food-container">
             <div class="title clearfix">
-              <h5>food menu 1</h5>
-              <button class="eg-btn btn-main hide-xs" data-toggle="modal" data-target="#add-food-item-modal">add item menu</button>
-              <button class="eg-btn btn-main show-xs" data-toggle="modal" data-target="#add-food-item-modal">add</button>
+              <h5>venue rooms</h5>
+              <button class="eg-btn btn-main hide-xs" data-toggle="modal" data-target="#add-room-modal">add room
+              </button>
+              <button class="eg-btn btn-main show-xs" data-toggle="modal" data-target="#add-room-modal">add</button>
             </div>
             <div class="content">
-              <ul class="list-unstyled menu-items single clearfix">
-                <li class="menu-item clearfix">
-                  <div class="data">
-                    <strong class="name">Food Item 1</strong>
+              <ul class="list-unstyled event-items room-items single clearfix">
+                <li class="event-item clearfix">
+                  <div class="room-meta">
+                    <img src="public/images/content/event-room.png" alt=""/>
+                    <strong class="name">Deluxe Room</strong>
+                    <span class="occupancy">100 Total Occupancy</span>
                   </div>
                   <div class="controls">
                     <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
-                  </div>
-                  <div class="price">
-                    <span class="price">Included</span>
                   </div>
                 </li>
-                <li class="menu-item clearfix">
-                  <div class="data">
-                    <strong class="name">Food Item 1</strong>
+                <li class="event-item clearfix">
+                  <div class="room-meta">
+                    <img src="public/images/content/event-room.png" alt=""/>
+                    <strong class="name">Deluxe Room</strong>
+                    <span class="occupancy">100 Total Occupancy</span>
                   </div>
                   <div class="controls">
                     <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
-                  </div>
-                  <div class="price">
-                    <span class="price">Included</span>
                   </div>
                 </li>
-                <li class="menu-item clearfix">
-                  <div class="data">
-                    <strong class="name">Food Item 1</strong>
+                <li class="event-item clearfix">
+                  <div class="room-meta">
+                    <img src="public/images/content/event-room.png" alt=""/>
+                    <strong class="name">Deluxe Room</strong>
+                    <span class="occupancy">100 Total Occupancy</span>
                   </div>
                   <div class="controls">
                     <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
-                  </div>
-                  <div class="price">
-                    <span class="price">Included</span>
                   </div>
                 </li>
-                <li class="menu-item clearfix">
-                  <div class="data">
-                    <strong class="name">Food Item 1</strong>
+                <li class="event-item clearfix">
+                  <div class="room-meta">
+                    <img src="public/images/content/event-room.png" alt=""/>
+                    <strong class="name">Deluxe Room</strong>
+                    <span class="occupancy">100 Total Occupancy</span>
                   </div>
                   <div class="controls">
                     <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
-                  </div>
-                  <div class="price">
-                    <span class="price">$5 Extra</span>
-                  </div>
-                </li>
-                <li class="menu-item clearfix">
-                  <div class="data">
-                    <strong class="name">Food Item 1</strong>
-                  </div>
-                  <div class="controls">
-                    <a class="edit" href="">Edit</a> <span>|</span> <a href="" class="remove">Remove</a>
-                  </div>
-                  <div class="price">
-                    <span class="price">$5 Extra</span>
                   </div>
                 </li>
               </ul>
@@ -199,7 +194,6 @@
             </div>
 
             <div class="dropdown">
-              <label>&nbsp;</label>
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="true">
                 This is extra
@@ -229,7 +223,7 @@
 </div>
 
 <div class="modal fade" id="edit-food-menu-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-sm" role="document">
+  <div class="modal-dialog" role="document">
     <div class="my-modal">
       <div class="my-modal-title">
         <h5>Edit food menu</h5>
@@ -250,6 +244,53 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="add-room-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="my-modal">
+      <div class="my-modal-title">
+        <h5>Add room</h5>
+      </div>
+      <div class="my-modal-content">
+        <div class="my-modal-form">
+          <div class="form-group">
+            <label for="">Room Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group double clearfix">
+            <label for="">Room Maximum Occupancy</label>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                50 Seated
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">50 Seated</a></li>
+                <li><a href="#">100 Seated</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                50 Standing
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">50 Standing</a></li>
+                <li><a href="#">100 Standing</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="eg-btn btn-main">continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="public/js/libs.min.js"></script>
 <script src="public/js/main.min.js"></script>
 </body>
