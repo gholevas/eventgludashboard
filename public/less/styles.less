@@ -828,24 +828,25 @@ Manage Venue Details
   &.double {
     > div {
       float: left;
+      width: 50%;
+      padding-right: 5px;
 
-      &.input {
-        margin-right: 16px;
-        width: 220px;
+      & + div {
+        padding-right: 0;
+        padding-left: 5px;
 
         @media @xs {
-          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
 
+      @media @xs {
+        width: 100%;
+        padding: 0;
+      }
+
       &.dropdown {
-        margin-top: 25px;
-        width: 177px;
-
-        @media @xs {
-          width: 100%;
-        }
-
         .btn-default {
           width: 100%;
           position: relative;
@@ -876,15 +877,25 @@ Manage Venue Details
         ul {
           width: 100%;
         }
+
+        & + .dropdown {
+          @media @xs {
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
 
   &.file-upload {
     .file {
+      margin-top: 10px;
       .btn-white-green {
         height: 38px;
         line-height: 38px;
+        width: 131px;
+        padding: 0;
+        text-align: center;
       }
 
       span {
@@ -1231,58 +1242,6 @@ Modal Styles
 ****************************
 ***************************/
 
-#add-photos-modal {
-  .modal-dialog {
-    width: 624px;
-
-    @media @xs {
-      width: auto;
-    }
-  }
-}
-
-.add-food-modal {
-  .modal-dialog {
-    width: 415px;
-
-    @media @xs {
-      width: auto;
-    }
-  }
-}
-
-.add-food-item-modal {
-  .modal-dialog {
-    width: 475px;
-
-    @media @xs {
-      width: auto;
-    }
-  }
-
-  .file-upload {
-    .file {
-      margin-top: 10px;
-
-      .btn-white-green {
-        width: 131px;
-        padding: 0;
-        text-align: center;
-      }
-    }
-  }
-
-  .my-modal-form-btn-wrapper {
-    margin: 0 -30px;
-
-    .btn-main {
-      width: 131px;
-      padding: 0;
-      text-align: center;
-    }
-  }
-}
-
 .my-modal {
   background-color: white;
   .border(1px, @gray-15);
@@ -1290,7 +1249,7 @@ Modal Styles
   .my-modal-title {
     background-color: @gray-8;
     .border-bottom(1px, @gray-15);
-    padding: 22px 30px;
+    padding: 18px 30px;
 
     h5 {
       text-transform: uppercase;
@@ -1341,7 +1300,7 @@ Modal Styles
 }
 
 .my-modal-form {
-  padding: 25px 0;
+  padding: 18px 0;
 
   .form-group {
     &:last-child {
@@ -1360,10 +1319,14 @@ Modal Styles
 
 .my-modal-form-btn-wrapper {
   .border-top(1px, @gray-15);
-  padding: 22px 30px;
+  padding: 18px 30px;
+  margin: 0 -30px;
 
   .btn-main {
     font-size: 15px;
+    width: 131px;
+    padding: 0;
+    text-align: center;
   }
 }
 
@@ -1386,8 +1349,10 @@ Menu Styles
   }
 }
 
-.menu-items {
-  .menu-item {
+.menu-items,
+.event-items {
+  .menu-item,
+  .event-item {
     .border-bottom(1px, @gray-16);
     padding: 15px 0;
 
@@ -1442,6 +1407,31 @@ Menu Styles
         }
       }
     }
+
+    .room-meta {
+      float: left;
+      height: 63px;
+      line-height: 21px;
+      padding-left: 75px;
+      padding-top: 10px;
+      position: relative;
+
+      @media @xs {
+        float: none;
+        width: auto;
+      }
+
+      .name,
+      .occupancy {
+        display: block;
+      }
+
+      > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 
   &.single {
@@ -1458,6 +1448,18 @@ Menu Styles
 
         @media @xs {
           display: none;
+        }
+      }
+    }
+  }
+
+  &.room-items {
+    .event-item {
+      .controls {
+        @media @xs {
+          float: none;
+          padding-left: 75px;
+          width: auto;
         }
       }
     }
