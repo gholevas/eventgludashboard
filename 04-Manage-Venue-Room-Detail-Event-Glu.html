@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>04 Manage Venue Room Detail Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav">
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li class="active"><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title" class="single-menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="menu-meta for-room">
+          <img src="public/images/content/room.png" alt=""/>
+          <strong class="name">deluXe room</strong>
+          <span class="price"><i class="fa icon-seated_icon fa-fw"></i> Seated <i
+            class="fa icon-standing_icon fa-fw"></i> Standing</span>
+        </div>
+
+        <button class="eg-btn btn-4 hide-xs" data-toggle="modal" data-target="#edit-room-modal">edit room name /
+          occupancy
+        </button>
+        <button class="eg-btn btn-4 show-xs" data-toggle="modal" data-target="#edit-room-modal">edit</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="sidebar-menu inner">
+          <ul class="list-unstyled">
+            <li><a href=""><span class="arrow"></span><i class="fa fa-chevron-left"></i> Back to rooms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="content-wrapper">
+          <div class="room-section">
+            <div class="title clearfix">
+              <h5>Room details</h5>
+            </div>
+            <div class="content">
+              <section class="content-section clearfix">
+                <div>
+                  <label for="">Room Description</label>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item">
+                  <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+              </section>
+              <section class="content-section clearfix">
+                <div>
+                  <label for="">Room Minimum Occupancy</label>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ultricie.</p>
+                </div>
+                <div class="form-item select-wrapper">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuOccupancy"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      30 Minimum
+                      <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOccupancy">
+                      <li><a href="#">50 Minimum</a></li>
+                      <li><a href="#">100 Minimum</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="room-section">
+            <div class="title clearfix">
+              <h5>venue Photos</h5>
+              <button class="eg-btn btn-main hide-xs" data-toggle="modal" data-target="#add-photos-modal">Add Photos
+              </button>
+              <button class="eg-btn btn-main show-xs" data-toggle="modal" data-target="#add-photos-modal">Add</button>
+            </div>
+            <div class="content">
+              <div class="photos-wrapper">
+                <p>Add photos of areas guests have access to. You can always come back later and add more.</p>
+
+                <div class="photos-container clearfix">
+                  <div class="photo-container active" show-btn>
+                    <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
+
+                    <div class="img-wrapper">
+                      <span class="profile-selector"></span>
+                      <img src="public/images/content/event-photo.png" alt=""/>
+                    </div>
+                    <textarea class="form-control" name="" cols="30" rows="10"
+                              placeholder="Photo Highlights"></textarea>
+                    <button class="eg-btn btn-main">Save</button>
+                  </div>
+                  <div class="photo-container" show-btn>
+                    <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
+
+                    <div class="img-wrapper">
+                      <span class="profile-selector"></span>
+                      <img src="public/images/content/event-photo.png" alt=""/>
+                    </div>
+                    <textarea class="form-control" name="" cols="30" rows="10"
+                              placeholder="Photo Highlights"></textarea>
+                    <button class="eg-btn btn-main">Save</button>
+                  </div>
+                  <div class="photo-container" show-btn>
+                    <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
+
+                    <div class="img-wrapper">
+                      <span class="profile-selector"></span>
+                      <img src="public/images/content/event-photo.png" alt=""/>
+                    </div>
+                    <textarea class="form-control" name="" cols="30" rows="10"
+                              placeholder="Photo Highlights"></textarea>
+                    <button class="eg-btn btn-main">Save</button>
+                  </div>
+                  <div class="photo-container" show-btn>
+                    <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
+
+                    <div class="img-wrapper">
+                      <span class="profile-selector"></span>
+                      <img src="public/images/content/event-photo.png" alt=""/>
+                    </div>
+                    <textarea class="form-control" name="" cols="30" rows="10"
+                              placeholder="Photo Highlights"></textarea>
+                    <button class="eg-btn btn-main">Save</button>
+                  </div>
+                  <div class="photo-container empty">
+                    <div class="img-wrapper">
+                      <button data-toggle="modal" data-target="#add-photos-modal">+ add photos</button>
+                    </div>
+                    <textarea class="form-control" name="" cols="30" rows="10"
+                              placeholder="Photo Highlights"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-section npb nbb">
+            <div class="title clearfix">
+              <h5>Basic pricing</h5>
+            </div>
+            <div class="content week-price-container">
+              <p>Add photos of areas guests have access to. You can always come back later and add more.</p>
+
+              <div class="overflow-x-scroll">
+                <div class="week-wrapper clearfix">
+                  <div class="day">
+                    <span class="name">Sun</span>
+                  </div>
+                  <div class="day">
+                    <span class="name">Mon</span>
+
+                    <div class="meta">
+                      <span>Minimun</span>
+
+                      <div class="price">$2,000</div>
+                    </div>
+                  </div>
+                  <div class="day">
+                    <span class="name">Tue</span>
+                  </div>
+                  <div class="day selected">
+                    <span class="name">Wed</span>
+                  </div>
+                  <div class="day">
+                    <span class="name">Thu</span>
+                  </div>
+                  <div class="day">
+                    <span class="name">Fri</span>
+                  </div>
+                  <div class="day closed">
+                    <span class="name">Sat</span>
+
+                  <span class="meta">
+                    <span>Closed</span>
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-section">
+            <div class="content">
+              <section class="content-section button clearfix">
+                <button type="submit" class="eg-btn btn-main">Save</button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal fade" id="edit-room-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="my-modal">
+      <div class="my-modal-title">
+        <h5>Edit room</h5>
+      </div>
+      <div class="my-modal-content">
+        <div class="my-modal-form">
+          <div class="form-group">
+            <label for="">Room Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group double clearfix">
+            <label for="">Room Maximum Occupancy</label>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                50 Seated
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">50 Seated</a></li>
+                <li><a href="#">100 Seated</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                50 Standing
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">50 Standing</a></li>
+                <li><a href="#">100 Standing</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="eg-btn btn-main">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="add-photos-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="my-modal">
+      <div class="my-modal-title">
+        <h5>Add Photos</h5>
+      </div>
+      <div class="my-modal-content">
+        <div class="add-photos">
+          <div class="text"><p>Drop files anywhere to upload</p></div>
+          <img class="sep" src="public/images/sep-2.png" alt=""/>
+          <a href="" class="eg-btn btn-white">Select Files</a>
+          <span>Max upload file size: 2MB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>
