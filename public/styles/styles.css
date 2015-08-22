@@ -455,7 +455,15 @@ Page Title Styles
 #page-title.single-menu .menu-meta {
   float: left;
   margin-top: 11px;
-  width: 200px;
+  width: 250px;
+}
+@media (max-width: 767px) {
+  #page-title.single-menu .menu-meta {
+    width: 225px;
+  }
+}
+#page-title.single-menu .menu-meta .fa {
+  color: #888888;
 }
 #page-title.single-menu .btn-4 {
   float: right;
@@ -707,6 +715,30 @@ Manage Venue Details
 .form-item input {
   height: 40px;
 }
+.form-item.select-wrapper .dropdown {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .form-item.select-wrapper .dropdown {
+    width: 100%;
+  }
+}
+.form-item.select-wrapper .dropdown > .btn {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+.form-item.select-wrapper .dropdown > .btn .fa {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+}
+.form-item.select-wrapper .dropdown .dropdown-menu {
+  width: 100%;
+}
 .map-wrapper {
   margin-top: 15px;
 }
@@ -720,6 +752,9 @@ Manage Venue Details
 }
 .content-section:last-child {
   margin-bottom: 0;
+}
+.content-section:last-child .form-item {
+  background: none;
 }
 .content-section > div {
   float: left;
@@ -774,9 +809,8 @@ Manage Venue Details
 }
 .content-section.button {
   margin: 0 -30px;
-  border-top: 1px solid #dcdcdc;
   min-height: 0;
-  padding: 30px 30px 0 30px;
+  padding: 0 30px;
 }
 .green-icon {
   border: 1px solid #83c23f;
@@ -1252,11 +1286,112 @@ Menu Styles
     display: none;
   }
 }
+.menu-items.room-items .event-item .controls,
+.event-items.room-items .event-item .controls {
+  height: 63px;
+  line-height: 63px;
+}
+.menu-items.room-items .event-item .controls > span,
+.event-items.room-items .event-item .controls > span {
+  vertical-align: middle;
+}
 @media (max-width: 767px) {
   .menu-items.room-items .event-item .controls,
   .event-items.room-items .event-item .controls {
     float: none;
     padding-left: 75px;
     width: auto;
+    height: 32px;
+    line-height: 32px;
   }
+}
+/***************************
+****************************
+Menu Styles
+****************************
+***************************/
+.room-section,
+.detail-section {
+  border-bottom: 1px solid #dcdcdc;
+}
+.room-section:last-child,
+.detail-section:last-child {
+  border-bottom: none;
+}
+.room-section.npb .content,
+.detail-section.npb .content {
+  padding-bottom: 0;
+}
+.room-section.nbb,
+.detail-section.nbb {
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .week-price-container .overflow-x-scroll {
+    overflow-x: scroll;
+    margin: 0 -30px;
+  }
+  .week-price-container .overflow-x-scroll .week-wrapper {
+    margin: 0;
+  }
+}
+.week-price-container > p {
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+.week-price-container .week-wrapper {
+  margin: 0 -30px;
+}
+@media (max-width: 767px) {
+  .week-price-container .week-wrapper {
+    width: 735px;
+  }
+}
+@media (max-width: 767px) {
+  .week-price-container .week-wrapper .day {
+    width: 105px;
+  }
+}
+.week-wrapper {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+.week-wrapper .day {
+  border-right: 1px solid #dcdcdc;
+  float: left;
+  width: 14.28571429%;
+  padding: 15px 18px;
+  height: 142px;
+  color: #464646;
+  font-size: 13px;
+  position: relative;
+  cursor: pointer;
+}
+.week-wrapper .day:last-child {
+  border-right: none;
+}
+.week-wrapper .day.selected {
+  background-color: #f6ffeb;
+}
+.week-wrapper .day.closed {
+  background-color: #fff4f0;
+}
+.week-wrapper .day.closed .meta > span {
+  font-family: 'proxima_nova_semibold';
+  font-size: 13px !important;
+  text-transform: uppercase;
+  color: #f26522;
+}
+.week-wrapper .day .meta {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  line-height: normal;
+}
+.week-wrapper .day .meta span:not(.price) {
+  font-size: 12px;
+}
+.week-wrapper .day .meta .price {
+  font-size: 20px;
+  color: #8dc63f;
 }
