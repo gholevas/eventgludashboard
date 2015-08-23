@@ -1,6 +1,6 @@
 @bg-color: #f3f3f3;
 
-@black-1: rgba(0, 0, 0, 0.8);
+@black-1: rgba(0, 0, 0, 0.5);
 
 @green-1: #83c23f;
 @green-2: #74ab38;
@@ -29,6 +29,7 @@
 @gray-19: #464646;
 @gray-20: #eeeeee;
 @gray-21: #7d7d7d;
+@gray-22: #ececec;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -610,7 +611,7 @@ Header Styles
   position: absolute;
   top: 65px;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 #mobile-sidebar-nav-wrapper {
@@ -1853,19 +1854,106 @@ Dashboard Styles
         }
       }
     }
+
+    .photo-wrapper {
+      margin: -30px;
+      position: relative;
+
+      @media @small {
+        margin: -30px -15px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .eg-btn {
+        font-size: 14px;
+        height: 34px;
+        left: 50%;
+        line-height: 34px;
+        margin-left: -68px;
+        margin-top: -17px;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 136px;
+      }
+    }
   }
 }
 
 .notifications-wrapper {
-  &.empty {
-    min-height: 245px;
+  min-height: 245px;
 
-    @media @small {
-      min-height: 232px;
+  @media @small {
+    min-height: 232px;
+  }
+
+  .empty-box {
+    margin-top: 40px;
+  }
+
+  .notification {
+    position: relative;
+    .border-bottom(1px, @gray-22);
+    padding: 14px 0;
+
+    &:first-child {
+      padding-top: 0;
+
+      .notification-user-img {
+        top: 0;
+      }
     }
 
-    .empty-box {
-      margin-top: 40px;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    > * {
+      float: left;
+    }
+
+    .notification-user-img {
+      height: 42px;
+      width: 42px;
+      border-radius: 100%;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+
+    .notification-text {
+      padding-left: 52px;
+
+      p {
+        margin: 0;
+        line-height: 21px;
+      }
+    }
+
+    .notification-btn-wrapper {
+      float: right;
+
+      @media @small, @xs {
+        clear: both;
+        float: none;
+        margin-left: 52px;
+        padding-top: 10px;
+      }
+
+      .eg-btn {
+        height: 42px;
+        line-height: 42px;
+        padding: 0;
+        text-align: center;
+        width: 86px;
+        font-size: 13px;
+      }
     }
   }
 }
