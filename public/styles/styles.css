@@ -436,7 +436,7 @@ Header Styles
   position: absolute;
   top: 65px;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 #mobile-sidebar-nav-wrapper {
   position: relative;
