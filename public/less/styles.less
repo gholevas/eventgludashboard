@@ -213,6 +213,16 @@ button {
 
 .mt {
   margin-top: 40px;
+
+  @media @xs {
+    margin-top: 23px;
+  }
+}
+
+.mtxs {
+  @media @xs {
+    margin-top: 23px;
+  }
 }
 
 /***************************
@@ -1893,8 +1903,24 @@ Dashboard Styles
   .widget {
     margin-bottom: 40px;
 
+    @media @xs {
+      margin-bottom: 23px;
+    }
+
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+#dashboard-meta-mobile {
+  margin-top: 10px;
+
+  .dashboard-meta {
+    > div {
+      > span {
+        font-size: 13px;
+      }
     }
   }
 }

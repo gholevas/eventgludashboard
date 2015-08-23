@@ -107,6 +107,16 @@ button:focus {
 .mt {
   margin-top: 40px;
 }
+@media (max-width: 767px) {
+  .mt {
+    margin-top: 23px;
+  }
+}
+@media (max-width: 767px) {
+  .mtxs {
+    margin-top: 23px;
+  }
+}
 /***************************
 ****************************
 Button & Links Styles
@@ -1604,6 +1614,17 @@ Dashboard Styles
 .widgets-sidebar .widget {
   margin-bottom: 40px;
 }
+@media (max-width: 767px) {
+  .widgets-sidebar .widget {
+    margin-bottom: 23px;
+  }
+}
 .widgets-sidebar .widget:last-child {
   margin-bottom: 0;
+}
+#dashboard-meta-mobile {
+  margin-top: 10px;
+}
+#dashboard-meta-mobile .dashboard-meta > div > span {
+  font-size: 13px;
 }
