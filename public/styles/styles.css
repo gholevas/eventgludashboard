@@ -1468,6 +1468,24 @@ Dashboard Styles
 .dashboard-meta > div > span.response {
   color: #83c23f;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget .title,
+  .widget .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget .content-btn-wrapper {
+    padding: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget .title h5 {
+    font-size: 13px;
+    line-height: normal;
+  }
+}
 .widget .widget-content ul li {
   margin-bottom: 15px;
 }
@@ -1485,6 +1503,11 @@ Dashboard Styles
 }
 .widget.widget-meta .content {
   padding: 10px 30px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget.widget-meta .content {
+    padding: 10px 15px;
+  }
 }
 .widget.widget-meta .content .top {
   border-bottom: 1px solid #dcdcdc;
@@ -1523,6 +1546,11 @@ Dashboard Styles
 .widget.widget-meta .content .bottom > div > span + span {
   font-size: 13px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget.widget-meta .content .bottom > div > span + span {
+    font-size: 10px;
+  }
+}
 .widget.widget-photo .content {
   background-color: #f9f9f9;
 }
@@ -1533,8 +1561,18 @@ Dashboard Styles
 .widget.widget-photo .content-btn-wrapper {
   border-top: 1px solid #dcdcdc;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .widget.widget-photo .content-btn-wrapper .eg-btn {
+    font-size: 13px;
+  }
+}
 .notifications-wrapper.empty {
   min-height: 245px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .notifications-wrapper.empty {
+    min-height: 232px;
+  }
 }
 .notifications-wrapper.empty .empty-box {
   margin-top: 40px;
@@ -1554,6 +1592,14 @@ Dashboard Styles
 .empty-box.photos {
   background: url("../images/bg-empty-image.png") no-repeat 50% 0;
   padding-top: 100px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .empty-box.photos .eg-btn {
+    font-size: 13px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
 }
 .widgets-sidebar .widget {
   margin-bottom: 40px;

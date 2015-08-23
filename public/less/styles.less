@@ -1719,6 +1719,30 @@ Dashboard Styles
 }
 
 .widget {
+
+  .title,
+  .content {
+    @media @small {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .content-btn-wrapper {
+    @media @small {
+      padding: 15px;
+    }
+  }
+
+  .title {
+    h5 {
+      @media @small {
+        font-size: 13px;
+        line-height: normal;
+      }
+    }
+  }
+
   .widget-content {
     ul {
       li {
@@ -1742,6 +1766,10 @@ Dashboard Styles
   &.widget-meta {
     .content {
       padding: 10px 30px;
+
+      @media @small {
+        padding: 10px 15px;
+      }
 
       .top {
         .border-bottom(1px, @gray-7);
@@ -1785,6 +1813,10 @@ Dashboard Styles
 
             & + span {
               font-size: 13px;
+
+              @media @small {
+                font-size: 10px;
+              }
             }
           }
         }
@@ -1804,6 +1836,12 @@ Dashboard Styles
 
     .content-btn-wrapper {
       .border-top(1px, @gray-7);
+
+      .eg-btn {
+        @media @small {
+          font-size: 13px;
+        }
+      }
     }
   }
 }
@@ -1811,6 +1849,10 @@ Dashboard Styles
 .notifications-wrapper {
   &.empty {
     min-height: 245px;
+
+    @media @small {
+      min-height: 232px;
+    }
 
     .empty-box {
       margin-top: 40px;
@@ -1835,6 +1877,15 @@ Dashboard Styles
   &.photos {
     background: url("../images/bg-empty-image.png") no-repeat 50% 0;
     padding-top: 100px;
+
+    .eg-btn {
+      @media @small {
+        font-size: 13px;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+      }
+    }
   }
 }
 
