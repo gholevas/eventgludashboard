@@ -27,6 +27,8 @@
 @gray-17: #d3d3d3;
 @gray-18: #888888;
 @gray-19: #464646;
+@gray-20: #eeeeee;
+@gray-21: #7d7d7d;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -209,6 +211,20 @@ button {
   }
 }
 
+.mt {
+  margin-top: 40px;
+
+  @media @xs {
+    margin-top: 23px;
+  }
+}
+
+.mtxs {
+  @media @xs {
+    margin-top: 23px;
+  }
+}
+
 /***************************
 ****************************
 Button & Links Styles
@@ -216,11 +232,10 @@ Button & Links Styles
 ***************************/
 
 .eg-btn {
-  font-family: 'proxima_nova_semibold';
+  .link-type(14px, white);
   font-weight: normal;
   font-style: normal;
   display: inline-block;
-  text-transform: uppercase;
   line-height: normal;
   text-align: center;
   border: none;
@@ -282,11 +297,13 @@ Button & Links Styles
     height: 32px;
     line-height: 32px;
     padding: 0 20px;
-    .box-shadow(1px, @gray-17);
+    //.box-shadow(1px, @gray-17);
+    .border(1px, @gray-14);
 
     &:hover {
       background-color: @green-1;
       color: white;
+      border-color: @green-1;
     }
   }
 
@@ -335,22 +352,25 @@ Header Styles
     li {
       float: left;
       .border-right(1px, @gray-1);
-      height: 36px;
-      line-height: 36px;
-      padding: 0 19px;
-
-      &:first-child {
-        padding-left: 0;
-      }
 
       &:last-child {
         border-right: none;
         padding-right: 0;
       }
 
+      &.active {
+        a {
+          background-color: @green-1;
+          color: white;
+        }
+      }
+
       a {
         .link-type(13px, @white-1);
         display: block;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 19px;
 
         &:hover {
           color: white;
@@ -557,7 +577,6 @@ Header Styles
 
   .main-nav {
     float: right;
-    margin-top: 13px;
   }
 
   .user {
@@ -620,6 +639,11 @@ Page Title Styles
 
   h5 {
     text-transform: uppercase;
+    float: left;
+  }
+
+  .dashboard-meta {
+    float: right;
   }
 
   &.single-menu {
@@ -660,10 +684,9 @@ Page Title Styles
 
   .price,
   .name {
-    font-family: 'proxima_nova_semibold';
+    .link-type(14px, @gray-6);
     font-weight: normal;
     display: block;
-    text-transform: uppercase;
   }
 
   .name {
@@ -799,6 +822,18 @@ Content Styles
   .content {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .content-btn-wrapper {
+    padding: 15px 30px;
+
+    > .eg-btn {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -1226,15 +1261,17 @@ Photos Styles
     }
 
     button {
-      font-family: 'proxima_nova_semibold';
-      font-size: 13px;
-      text-transform: uppercase;
+      .link-type(13px, @green-1);
       text-align: center;
       position: absolute;
       bottom: 40px;
       left: 0;
       width: 100%;
       border: none;
+
+      &:hover {
+        color: @green-2;
+      }
     }
   }
 
@@ -1608,10 +1645,8 @@ Menu Styles
 
       .meta {
         > span {
-          font-family: 'proxima_nova_semibold';
+          .link-type(13px, @red-1);
           font-size: 13px !important;
-          text-transform: uppercase;
-          color: @red-1;
         }
       }
     }
@@ -1629,6 +1664,262 @@ Menu Styles
       .price {
         font-size: 20px;
         color: @green-5;
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Dashboard Styles
+****************************
+***************************/
+
+.dashboard-page {
+  #page-title {
+    padding: 10px 0;
+
+    h5 {
+      line-height: 42px;
+    }
+  }
+}
+
+.rating {
+  text-align: left;
+
+  > span {
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      color: @green-1;
+    }
+  }
+}
+
+.dashboard-meta {
+  > div {
+    float: left;
+    height: 42px;
+
+    &:first-child {
+      padding-right: 16px;
+      .border-right(1px, @gray-20);
+    }
+
+    &:last-child {
+      padding-left: 16px;
+    }
+
+    .rating {
+      height: 21px;
+    }
+
+    > span {
+      .link-type(14px, @gray-4);
+      line-height: 21px;
+      display: block;
+
+      &.response {
+        color: @green-1;
+      }
+    }
+  }
+}
+
+.widget {
+
+  .title,
+  .content {
+    @media @small {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .content-btn-wrapper {
+    @media @small {
+      padding: 15px;
+    }
+  }
+
+  .title {
+    h5 {
+      @media @small {
+        font-size: 13px;
+        line-height: normal;
+      }
+    }
+  }
+
+  .widget-content {
+    ul {
+      li {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          .link-type(13px, @green-1);
+
+          &:hover {
+            color: @green-2;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-meta {
+    .content {
+      padding: 10px 30px;
+
+      @media @small {
+        padding: 10px 15px;
+      }
+
+      .top {
+        .border-bottom(1px, @gray-7);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        > span {
+          color: black;
+          display: block;
+          line-height: normal;
+
+          &.icon {
+            color: @green-1;
+            float: left;
+            font-size: 30px;
+            margin-right: 15px;
+            padding-top: 10px;
+          }
+
+          &.data {
+            font-size: 37px;
+
+            & + span {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .bottom {
+        > div {
+          float: left;
+          width: 50%;
+          text-align: left;
+
+          > span {
+            display: block;
+            line-height: normal;
+            color: black;
+            font-size: 18px;
+
+            & + span {
+              font-size: 13px;
+
+              @media @small {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-photo {
+    .content {
+      background-color: @gray-8;
+    }
+
+    .title {
+      background-color: white;
+      border: none;
+    }
+
+    .content-btn-wrapper {
+      .border-top(1px, @gray-7);
+
+      .eg-btn {
+        @media @small {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.notifications-wrapper {
+  &.empty {
+    min-height: 245px;
+
+    @media @small {
+      min-height: 232px;
+    }
+
+    .empty-box {
+      margin-top: 40px;
+    }
+  }
+}
+
+.empty-box {
+  padding-top: 80px;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    color: @gray-21;
+    margin-bottom: 30px;
+  }
+
+  &.notifications {
+    background: url("../images/ico-notifications.png") no-repeat 50% 0;
+  }
+
+  &.photos {
+    background: url("../images/bg-empty-image.png") no-repeat 50% 0;
+    padding-top: 100px;
+
+    .eg-btn {
+      @media @small {
+        font-size: 13px;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.widgets-sidebar {
+  .widget {
+    margin-bottom: 40px;
+
+    @media @xs {
+      margin-bottom: 23px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#dashboard-meta-mobile {
+  margin-top: 10px;
+
+  .dashboard-meta {
+    > div {
+      > span {
+        font-size: 13px;
       }
     }
   }
