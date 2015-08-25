@@ -83,6 +83,11 @@ h6 {
   line-height: normal;
   color: #636363;
 }
+.font-settings-3 {
+  line-height: 20px;
+  font-size: 13px;
+  color: #636363;
+}
 a,
 button {
   color: #83c23f;
@@ -516,6 +521,8 @@ Page Title Styles
   height: 54px;
 }
 .menu-meta > img {
+  height: 54px;
+  width: 54px;
   border-radius: 100%;
   margin-right: 14px;
   float: left;
@@ -635,6 +642,14 @@ Content Styles
 }
 .sidebar-menu.inner ul li:last-child a:hover {
   color: #74ab38;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar-menu.inner {
+    float: left;
+  }
+  .sidebar-menu.inner + .sidebar-menu {
+    float: right;
+  }
 }
 .content-wrapper {
   box-shadow: 0 0 1px 0 #dcdcdc;
@@ -1889,4 +1904,74 @@ Events Styles
   background-color: #83c23f;
   color: white;
   border-color: #83c23f;
+}
+/***************************
+****************************
+Events Styles
+****************************
+***************************/
+.chat-history {
+  overflow-y: scroll;
+  height: 292px;
+}
+.chat-item {
+  border-bottom: 1px solid #ececec;
+  padding: 25px 0;
+}
+.chat-item:first-child {
+  padding-top: 0;
+}
+.chat-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.chat-item > * {
+  float: left;
+}
+.chat-item .chat-user {
+  height: 64px;
+  width: 64px;
+  margin-right: 18px;
+}
+.chat-item .chat-content {
+  width: 703px;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .chat-item .chat-content {
+    width: 553px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .chat-item .chat-content {
+    width: 576px;
+  }
+}
+@media (max-width: 767px) {
+  .chat-item .chat-content {
+    width: 66%;
+  }
+}
+.chat-item .chat-content .chat-title {
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+.chat-item .chat-content .chat-title > * {
+  display: block;
+  line-height: normal;
+}
+.chat-item .chat-content .chat-title span {
+  color: #636363;
+}
+.chat-item .chat-content p {
+  line-height: 20px;
+  font-size: 13px;
+  color: #636363;
+}
+.chat-send-message {
+  margin: 0 -30px;
+  padding: 30px 30px 0 30px;
+  border-top: 1px solid #ececec;
+}
+.chat-send-message textarea {
+  height: 100px;
 }
