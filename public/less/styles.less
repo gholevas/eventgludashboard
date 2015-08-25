@@ -2294,7 +2294,8 @@ Events Styles
 ****************************
 ***************************/
 
-.chat-history {
+.chat-history,
+.notes-history {
   overflow-y: scroll;
   height: 292px;
 }
@@ -2424,6 +2425,40 @@ Events Styles
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+/***************************
+****************************
+Notes Styles
+****************************
+***************************/
+
+.note {
+  .border-bottom(1px, @gray-22);
+  padding: 15px 0;
+  color: @gray-9;
+  font-size: 13px;
+  position: relative;
+
+  > a {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: @gray-24;
+
+    &:hover {
+      color: @gray-24;
+    }
+  }
+
+  &:first-child {
+    padding-top: 0;
+
+    > a {
+      top: -5px;
     }
   }
 }

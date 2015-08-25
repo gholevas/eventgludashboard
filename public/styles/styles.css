@@ -1933,7 +1933,8 @@ Events Styles
 Events Styles
 ****************************
 ***************************/
-.chat-history {
+.chat-history,
+.notes-history {
   overflow-y: scroll;
   height: 292px;
 }
@@ -2048,4 +2049,32 @@ Events Styles
 }
 .event-details-wrapper .dl-horizontal dd:last-child {
   margin-bottom: 0;
+}
+/***************************
+****************************
+Notes Styles
+****************************
+***************************/
+.note {
+  border-bottom: 1px solid #ececec;
+  padding: 15px 0;
+  color: #636363;
+  font-size: 13px;
+  position: relative;
+}
+.note > a {
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: #cccccc;
+}
+.note > a:hover {
+  color: #cccccc;
+}
+.note:first-child {
+  padding-top: 0;
+}
+.note:first-child > a {
+  top: -5px;
 }
