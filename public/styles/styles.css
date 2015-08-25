@@ -1998,3 +1998,54 @@ Events Styles
 .chat-send-message textarea {
   height: 100px;
 }
+.event-details-wrapper {
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .event-details-wrapper .table-wrapper {
+    overflow-x: scroll;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .event-details-wrapper .table-wrapper .eg-table {
+    width: 500px;
+  }
+}
+.event-details-wrapper .table {
+  margin: 0;
+}
+.event-details-wrapper .table > thead > tr > th {
+  border-width: 1px;
+}
+.event-details-wrapper .fa {
+  color: #cccccc;
+  margin-right: 8px;
+}
+.event-details-wrapper .bigger {
+  font-size: 16px;
+}
+.event-details-wrapper .dl-horizontal {
+  margin-bottom: 0;
+}
+.event-details-wrapper .dl-horizontal dt {
+  text-align: left;
+  width: 120px;
+}
+@media (max-width: 767px) {
+  .event-details-wrapper .dl-horizontal dt {
+    width: auto;
+  }
+}
+.event-details-wrapper .dl-horizontal dd {
+  margin-bottom: 15px;
+  margin-left: 120px;
+}
+@media (max-width: 767px) {
+  .event-details-wrapper .dl-horizontal dd {
+    margin-left: 28px;
+  }
+}
+.event-details-wrapper .dl-horizontal dd:last-child {
+  margin-bottom: 0;
+}

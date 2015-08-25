@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>02 Events Detail Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body>
+<header id="header">
+  <div class="header-border-top"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li class="active"><a href="">Events</a></li>
+            <li><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav">
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li class="active"><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title" class="single-menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="menu-meta">
+          <img src="public/images/content/event-photo-2.png" alt=""/>
+          <strong class="name">Maria's wedding</strong>
+          <span class="price">Wedding</span>
+        </div>
+
+        <button class="eg-btn btn-4 hide-xs">edit event name / type</button>
+        <button class="eg-btn btn-4 show-xs">edit</button>
+      </div>
+    </div>
+  </div>
+</section>
+<nav id="mobile-sidebar-nav-wrapper" class="mobile-sidebar-menu show-xs">
+  <span class="mobile-sidebar-menu-toggler collapsed" data-toggle="collapse" data-target="#mobile-sidebar-nav">
+    <i class="fa fa-fw icon-details_icon"></i> Details
+    <span><i class="fa fa-caret-down"></i></span>
+  </span>
+  <ul id="mobile-sidebar-nav" class="list-unstyled collapse hide-s hide-m hide-xl">
+    <li><a href=""><i class="fa fa-fw icon-details_icon"></i> Details</a></li>
+    <li><a href=""><i class="fa fa-fw icon-notes_icon"></i> Notes</a></li>
+    <li><a href=""><i class="fa fa-fw icon-chat_icon"></i> Chat</a></li>
+  </ul>
+</nav>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="sidebar-menu inner">
+          <ul class="list-unstyled">
+            <li><a href=""><span class="arrow"></span><i class="fa fa-chevron-left"></i> Back to events</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-menu hide-xs">
+          <ul class="list-unstyled">
+            <li class="active"><a href=""><span class="arrow"></span><i class="fa fa-fw icon-details_icon"></i> Details</a>
+            </li>
+            <li><a href=""><span class="arrow"></span><i class="fa fa-fw icon-notes_icon"></i> Notes</a>
+            </li>
+            <li><a href=""><span class="arrow"></span><i class="fa fa-fw icon-chat_icon"></i> Chat</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>Client details</h5>
+                <a href="" class="conf"><i class="fa fa-cog"></i></a>
+              </div>
+              <div class="content">
+                <div class="event-details-wrapper">
+                  <dl class="dl-horizontal">
+                    <dt><span><i class="fa fa-fw icon-client_icon"></i></span> <strong>Name</strong></dt>
+                    <dd>Karina Romaine</dd>
+                    <dt><span><i class="fa fa-fw fa-envelope"></i></span> <strong>E-mail</strong></dt>
+                    <dd>karinaromaine@gmail.com</dd>
+                    <dt><span><i class="fa fa-fw fa-phone"></i></span> <strong>Phone</strong></dt>
+                    <dd>897-96523-6584</dd>
+                    <dt><span><i class="fa fa-fw fa-map-marker"></i></span> <strong>Address</strong></dt>
+                    <dd>San José, CR</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mtxs">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>Event summary</h5>
+                <a href="" class="conf"><i class="fa fa-cog"></i></a>
+              </div>
+              <div class="content">
+                <div class="event-details-wrapper">
+                  <dl class="dl-horizontal">
+                    <dt><span><i class="fa fa-fw icon-upcoming_icon"></i></span> <strong>Date</strong></dt>
+                    <dd>07/10/2015</dd>
+                    <dt><span><i class="fa fa-fw icon-clock_icon"></i></span> <strong>Time</strong></dt>
+                    <dd>08:00PM - 10:00PM</dd>
+                    <dt><span><i class="fa fa-fw icon-room_icon"></i></span> <strong>Room</strong></dt>
+                    <dd>Main Room</dd>
+                    <dt><span><i class="fa fa-fw icon-guests_icon"></i></span> <strong>Guests</strong></dt>
+                    <dd>50 Adults, 60 Kids</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt mtxs">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>Order summary</h5>
+                <a href="" class="eg-btn btn-main">Edit</a>
+              </div>
+              <div class="content">
+                <div class="event-details-wrapper">
+                  <div class="table-wrapper">
+                    <div class="eg-table">
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th>Item Name</th>
+                          <th>Item Price</th>
+                          <th>Item Quality</th>
+                          <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>
+                            <strong>Food 1</strong><br/>
+                            <span>Buffet Menu</span><br/>
+                            <span>Sweet 16 Menu (Kids)</span>
+                          </td>
+                          <td>
+                            <span>$3.00 pp</span>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>50</span><br/>
+                            <span>50</span>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>$50</span><br/>
+                            <span>$50</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Drink</strong><br/>
+                            <span>Premium Order Bar</span><br/>
+                            <span>Cash Bar (Kids)</span>
+                          </td>
+                          <td>
+                            <span>$3.00 pp</span>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>50</span><br/>
+                            <span>50</span>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>$50</span><br/>
+                            <span>$50</span>
+                          </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                          <td>
+                            <strong>Add-Ons</strong><br/>
+                            <span>None Selected</span>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>0</span>
+                          </td>
+                          <td>
+                            <span>&nbsp;</span><br/>
+                            <span>0</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                            <span>Price per person</span><br/>
+                            <span>Discount (15%)</span><br/>
+                            <span>Tax</span>
+                          </td>
+                          <td>
+                            <span>$68</span><br/>
+                            <span>$74.11</span><br/>
+                            <span>$785</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            <strong class="bigger">Total</strong><br/>
+                            <span>Balance Paid</span><br/>
+                            <strong class="bigger">Balance Pending</strong>
+                          </td>
+                          <td>
+                            <strong class="bigger">$948</strong><br/>
+                            <span>$100</span><br/>
+                            <strong class="bigger">$848</strong>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>
