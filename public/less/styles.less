@@ -31,6 +31,7 @@
 @gray-21: #7d7d7d;
 @gray-22: #ececec;
 @gray-23: #bcbcbc;
+@gray-24: #cccccc;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -2364,5 +2365,65 @@ Events Styles
 
   textarea {
     height: 100px;
+  }
+}
+
+.event-details-wrapper {
+  font-size: 13px;
+
+  .table-wrapper {
+    @media @xs {
+      overflow-x: scroll;
+      width: 100%;
+    }
+
+    .eg-table {
+      @media @xs {
+        width: 500px;
+      }
+    }
+  }
+
+  .table {
+    margin: 0;
+
+    > thead > tr > th {
+      border-width: 1px;
+    }
+  }
+
+  .fa {
+    color: @gray-24;
+    margin-right: 8px;
+  }
+
+  .bigger {
+    font-size: 16px;
+  }
+
+  .dl-horizontal {
+    margin-bottom: 0;
+
+    dt {
+      text-align: left;
+      width: 120px;
+
+      @media @xs {
+        width: auto;
+      }
+    }
+
+    dd {
+      margin-bottom: 15px;
+      margin-left: 120px;
+
+      @media @xs {
+        margin-left: 28px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
