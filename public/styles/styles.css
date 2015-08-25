@@ -1762,7 +1762,7 @@ Events Styles
 }
 .event-item .title,
 .event-item .content {
-  padding-left: 136px;
+  padding: 18px 20px 18px 136px;
 }
 .event-item .title h5 {
   line-height: normal;
@@ -1782,7 +1782,7 @@ Events Styles
   width: 90px;
   border-radius: 100%;
   left: 20px;
-  top: 20px;
+  top: 22px;
 }
 .event-item .content .event-meta .ribbon {
   position: absolute;
