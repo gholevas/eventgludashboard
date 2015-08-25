@@ -1760,6 +1760,12 @@ Events Styles
 .event-item:last-child {
   margin-bottom: 0;
 }
+.event-item .price {
+  line-height: normal;
+  color: #83c23f;
+  float: right;
+  font-size: 22px;
+}
 .event-item .title,
 .event-item .content {
   padding: 18px 20px 18px 136px;
@@ -1770,11 +1776,11 @@ Events Styles
 .event-item .title h5 span {
   display: block;
 }
-.event-item .title .price {
-  line-height: normal;
-  color: #83c23f;
-  float: right;
-  font-size: 22px;
+@media (max-width: 767px) {
+  .event-item .content {
+    padding-left: 20px;
+    padding-top: 72px;
+  }
 }
 .event-item .content .event-meta .event-image {
   position: absolute;
@@ -1790,9 +1796,28 @@ Events Styles
   top: 0;
   z-index: 10;
 }
+@media (max-width: 767px) {
+  .event-item .content .event-meta .price {
+    position: absolute;
+    left: 0;
+    padding-left: 136px;
+    top: 90px;
+  }
+}
 .event-item .content .event-meta > div {
   width: 25%;
   float: left;
+}
+@media (max-width: 767px) {
+  .event-item .content .event-meta > div {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .event-item .content .event-meta > div:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
 }
 .event-item .content .event-meta > div span {
   display: block;

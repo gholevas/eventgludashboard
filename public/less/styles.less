@@ -2081,6 +2081,13 @@ Events Styles
     margin-bottom: 0;
   }
 
+  .price {
+    line-height: normal;
+    color: @green-1;
+    float: right;
+    font-size: 22px;
+  }
+
   .title,
   .content {
     padding: 18px 20px 18px 136px;
@@ -2094,16 +2101,14 @@ Events Styles
         display: block;
       }
     }
-
-    .price {
-      line-height: normal;
-      color: @green-1;
-      float: right;
-      font-size: 22px;
-    }
   }
 
   .content {
+    @media @xs {
+      padding-left: 20px;
+      padding-top: 72px;
+    }
+
     .event-meta {
       .event-image {
         position: absolute;
@@ -2121,9 +2126,29 @@ Events Styles
         z-index: 10;
       }
 
+      .price {
+        @media @xs {
+          position: absolute;
+          left: 0;
+          padding-left: 136px;
+          top: 90px;
+        }
+      }
+
       > div {
         width: 25%;
         float: left;
+
+        @media @xs {
+          width: 50%;
+          margin-bottom: 25px;
+        }
+
+        &:nth-last-child(-n+2) {
+          @media @xs {
+            margin-bottom: 0;
+          }
+        }
 
         span {
           display: block;
