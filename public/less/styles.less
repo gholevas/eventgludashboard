@@ -832,7 +832,6 @@ Content Styles
       li {
         &:last-child {
           .border-bottom(1px, @gray-5);
-          margin: 0;
 
           @media @small, @xs {
             border-bottom: none;
@@ -901,6 +900,12 @@ Content Styles
     line-height: 32px;
     font-size: 14px;
     padding: 0 24px;
+  }
+
+  .conf {
+    line-height: 32px;
+    font-size: 22px;
+    float: right;
   }
 }
 
@@ -2029,6 +2034,27 @@ Dashboard Styles
         text-align: center;
       }
     }
+  }
+
+  &.client-details,
+  &.events-summary,
+  &.order-summary {
+    padding-top: 47px;
+    background: url("../images/ico-client-details.png") no-repeat 50% 0;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.events-summary {
+    background: url("../images/ico-event-summary.png") no-repeat 50% 0;
+  }
+
+  &.order-summary {
+    background: url("../images/ico-order-summary.png") no-repeat 50% 0;
+    margin-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
