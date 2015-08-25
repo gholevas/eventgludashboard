@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>01 Manage Venue Details Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body class="events-page">
+<header id="header">
+  <div class="header-border-top"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li class="active"><a href="">Events</a></li>
+            <li><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav">
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li class="active"><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title" class="smaller">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h5>Events manager</h5>
+
+        <div class="events-controls clearfix">
+          <div><a href="" class="eg-btn btn-main">New Event/Quote</a></div>
+          <div><input type="text" placeholder="Search Events"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<nav id="mobile-sidebar-nav-wrapper" class="mobile-sidebar-menu show-xs">
+  <span class="mobile-sidebar-menu-toggler collapsed" data-toggle="collapse" data-target="#mobile-sidebar-nav">
+    <i class="fa fa-fw icon-upcoming_icon"></i> Upcoming
+    <span><i class="fa fa-caret-down"></i></span>
+  </span>
+  <ul id="mobile-sidebar-nav" class="list-unstyled collapse hide-s hide-m hide-xl">
+    <li><a href=""><i class="fa fa-fw icon-upcoming_icon"></i> Upcoming</a></li>
+    <li><a href=""><i class="fa fa-fw icon-leads_icon"></i> Leads</a></li>
+    <li><a href=""><i class="fa fa-fw icon-past_icon"></i> Past events</a></li>
+  </ul>
+</nav>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 hide-xs">
+        <div class="sidebar-menu">
+          <ul class="list-unstyled">
+            <li class="active"><a href=""><span class="arrow"></span><i class="fa fa-fw icon-upcoming_icon"></i>
+              Upcoming</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa fa-fw icon-leads_icon"></i> Leads</a></li>
+            <li><a href=""><span class="arrow"></span><i class="fa fa-fw icon-past_icon"></i> Past events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="events-selector clearfix">
+          <h5>25 upcoming events</h5>
+
+          <div class="selector-wrapper clearfix hide-xs">
+            <span>Sort by</span>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                Name
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Other</a></li>
+                <li><a href="#">Other</a></li>
+                <li><a href="#">Other</a></li>
+                <li><a href="#">Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="events-wrapper">
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+                  <span class="price show-xs">$9,674</span>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="content-wrapper">
+              <div class="title clearfix">
+                <h5>maria's wedding <span>wedding</span></h5>
+                <span class="price hide-xs">$9,674</span>
+              </div>
+              <div class="content">
+                <div class="event-meta clearfix">
+                  <img src="public/images/ribbon-upcoming.png" alt="" class="ribbon"/>
+                  <img class="event-image" src="public/images/content/event-photo-2.png" alt=""/>
+
+                  <div>
+                    <span><i class="fa icon-calendar_icon fa-fw"></i>Date</span>
+                    <span>Apr 26, 2016</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-clock_icon fa-fw"></i>Time</span>
+                    <span>7:00PM - 10:00PM</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-room_icon fa-fw"></i>Room</span>
+                    <span>Deluxe Room</span>
+                  </div>
+                  <div>
+                    <span><i class="fa icon-guests_icon fa-fw"></i>Guests</span>
+                    <span>50 Adults, 30 Kids</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eg-pagination">
+          <nav>
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>

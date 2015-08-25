@@ -238,8 +238,8 @@ Header Styles
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
   display: block;
-  height: 64px;
-  line-height: 64px;
+  height: 65px;
+  line-height: 65px;
   padding: 0 19px;
 }
 .main-nav ul li a:hover {
@@ -403,7 +403,16 @@ Header Styles
 #header {
   background-color: black;
   height: 65px;
-  border-top: 1px solid #83c23f;
+  position: relative;
+}
+#header .header-border-top {
+  background: url("../images/border-top.png") repeat-x 0 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 3px;
+  z-index: 10;
 }
 #header .logo {
   float: left;
@@ -488,6 +497,20 @@ Page Title Styles
 #page-title.single-menu .btn-4 {
   float: right;
   margin-top: 22px;
+}
+#page-title .events-controls {
+  float: right;
+}
+#page-title.smaller {
+  padding: 15px 0;
+}
+#page-title.smaller h5 {
+  line-height: 32px;
+}
+#page-title.smaller .eg-btn {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
 }
 .menu-meta {
   height: 54px;
@@ -1705,4 +1728,165 @@ Dashboard Styles
 }
 #dashboard-meta-mobile .dashboard-meta > div > span {
   font-size: 13px;
+}
+/***************************
+****************************
+Events Styles
+****************************
+***************************/
+.events-controls > div {
+  float: left;
+  border-right: 1px solid #f3f3f3;
+  padding: 0 16px;
+}
+.events-controls > div:first-child {
+  padding-left: 0;
+}
+.events-controls > div:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.events-controls input {
+  background: url("../images/ico-glass.png") no-repeat 0 50%;
+  padding: 0;
+  padding: 0 0 0 25px;
+  height: 32px;
+  border: none;
+}
+.event-item {
+  position: relative;
+  margin-bottom: 17px;
+}
+.event-item:last-child {
+  margin-bottom: 0;
+}
+.event-item .price {
+  line-height: normal;
+  color: #83c23f;
+  float: right;
+  font-size: 22px;
+}
+.event-item .title,
+.event-item .content {
+  padding: 18px 20px 18px 136px;
+}
+.event-item .title h5 {
+  line-height: normal;
+}
+.event-item .title h5 span {
+  display: block;
+}
+@media (max-width: 767px) {
+  .event-item .content {
+    padding-left: 20px;
+    padding-top: 72px;
+  }
+}
+.event-item .content .event-meta .event-image {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  left: 20px;
+  top: 22px;
+}
+.event-item .content .event-meta .ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+@media (max-width: 767px) {
+  .event-item .content .event-meta .price {
+    position: absolute;
+    left: 0;
+    padding-left: 136px;
+    top: 90px;
+  }
+}
+.event-item .content .event-meta > div {
+  width: 25%;
+  float: left;
+}
+@media (max-width: 767px) {
+  .event-item .content .event-meta > div {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .event-item .content .event-meta > div:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+.event-item .content .event-meta > div span {
+  display: block;
+  font-size: 13px;
+  color: #636363;
+  font-weight: bold;
+  line-height: 22px;
+}
+.event-item .content .event-meta > div span + span {
+  font-weight: normal;
+}
+.event-item .content .event-meta > div span .fa {
+  color: #bcbcbc;
+  font-size: 18px;
+  margin-right: 4px;
+  vertical-align: text-bottom;
+}
+.events-selector {
+  margin-bottom: 15px;
+}
+.events-selector h5 {
+  text-transform: uppercase;
+  float: left;
+  line-height: 40px;
+}
+.events-selector .selector-wrapper {
+  float: right;
+}
+.events-selector .selector-wrapper > span {
+  color: #636363;
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  margin-right: 17px;
+}
+.events-selector .selector-wrapper .dropdown {
+  float: left;
+  color: #636363;
+}
+.events-selector .selector-wrapper .dropdown .btn {
+  color: #636363;
+  line-height: 40px;
+  height: 40px;
+  width: 125px;
+  padding: 0 16px;
+  text-align: left;
+  position: relative;
+}
+.events-selector .selector-wrapper .dropdown .btn span {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+}
+.pagination li a {
+  color: #83c23f;
+  font-size: 17px;
+}
+.pagination li a:hover {
+  background-color: #83c23f;
+  color: white;
+}
+.pagination li.active a {
+  background-color: #83c23f;
+  color: white;
+  border-color: #83c23f;
+}
+.pagination li.active a:hover {
+  background-color: #83c23f;
+  color: white;
+  border-color: #83c23f;
 }

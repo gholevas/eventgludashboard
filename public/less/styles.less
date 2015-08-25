@@ -30,6 +30,7 @@
 @gray-20: #eeeeee;
 @gray-21: #7d7d7d;
 @gray-22: #ececec;
+@gray-23: #bcbcbc;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -369,8 +370,8 @@ Header Styles
       a {
         .link-type(13px, @white-1);
         display: block;
-        height: 64px;
-        line-height: 64px;
+        height: 65px;
+        line-height: 65px;
         padding: 0 19px;
 
         &:hover {
@@ -569,7 +570,17 @@ Header Styles
 #header {
   background-color: black;
   height: 65px;
-  .border-top(1px, @green-1);
+  position: relative;
+
+  .header-border-top {
+    background: url("../images/border-top.png") repeat-x 0 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 3px;
+    z-index: 10;
+  }
 
   .logo {
     float: left;
@@ -670,6 +681,24 @@ Page Title Styles
     .btn-4 {
       float: right;
       margin-top: 22px;
+    }
+  }
+
+  .events-controls {
+    float: right;
+  }
+
+  &.smaller {
+    padding: 15px 0;
+
+    h5 {
+      line-height: 32px;
+    }
+
+    .eg-btn {
+      height: 32px;
+      line-height: 32px;
+      font-size: 13px;
     }
   }
 }
@@ -2008,6 +2037,209 @@ Dashboard Styles
     > div {
       > span {
         font-size: 13px;
+      }
+    }
+  }
+}
+
+/***************************
+****************************
+Events Styles
+****************************
+***************************/
+
+.events-controls {
+  > div {
+    float: left;
+    .border-right(1px, @bg-color);
+    padding: 0 16px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  input {
+    background: url("../images/ico-glass.png") no-repeat 0 50%;
+    padding: 0;
+    padding: 0 0 0 25px;
+    height: 32px;
+    border: none;
+  }
+}
+
+.event-item {
+  position: relative;
+  margin-bottom: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .price {
+    line-height: normal;
+    color: @green-1;
+    float: right;
+    font-size: 22px;
+  }
+
+  .title,
+  .content {
+    padding: 18px 20px 18px 136px;
+  }
+
+  .title {
+    h5 {
+      line-height: normal;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .content {
+    @media @xs {
+      padding-left: 20px;
+      padding-top: 72px;
+    }
+
+    .event-meta {
+      .event-image {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        border-radius: 100%;
+        left: 20px;
+        top: 22px;
+      }
+
+      .ribbon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+
+      .price {
+        @media @xs {
+          position: absolute;
+          left: 0;
+          padding-left: 136px;
+          top: 90px;
+        }
+      }
+
+      > div {
+        width: 25%;
+        float: left;
+
+        @media @xs {
+          width: 50%;
+          margin-bottom: 25px;
+        }
+
+        &:nth-last-child(-n+2) {
+          @media @xs {
+            margin-bottom: 0;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 13px;
+          color: @gray-9;
+          font-weight: bold;
+          line-height: 22px;
+
+          & + span {
+            font-weight: normal;
+          }
+
+          .fa {
+            color: @gray-23;
+            font-size: 18px;
+            margin-right: 4px;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+    }
+  }
+}
+
+.events-selector {
+  margin-bottom: 15px;
+
+  h5 {
+    text-transform: uppercase;
+    float: left;
+    line-height: 40px;
+  }
+
+  .selector-wrapper {
+    float: right;
+
+    > span {
+      color: @gray-9;
+      float: left;
+      line-height: 40px;
+      height: 40px;
+      font-size: 14px;
+      margin-right: 17px;
+    }
+
+    .dropdown {
+      float: left;
+      color: @gray-9;
+
+      .btn {
+        color: @gray-9;
+        line-height: 40px;
+        height: 40px;
+        width: 125px;
+        padding: 0 16px;
+        text-align: left;
+        position: relative;
+
+        span {
+          position: absolute;
+          right: 16px;
+          top: 18px;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  li {
+    a {
+      color: @green-1;
+      font-size: 17px;
+
+      &:hover {
+        background-color: @green-1;
+        color: white;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: @green-1;
+        color: white;
+        border-color: @green-1;
+
+        &:hover {
+          background-color: @green-1;
+          color: white;
+          border-color: @green-1;
+        }
       }
     }
   }
