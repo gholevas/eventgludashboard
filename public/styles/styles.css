@@ -630,7 +630,6 @@ Content Styles
 }
 .sidebar-menu.inner ul li:last-child {
   border-bottom: 1px solid #e7e7e7;
-  margin: 0;
 }
 @media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
   .sidebar-menu.inner ul li:last-child {
@@ -688,6 +687,11 @@ Content Styles
   line-height: 32px;
   font-size: 14px;
   padding: 0 24px;
+}
+.title .conf {
+  line-height: 32px;
+  font-size: 22px;
+  float: right;
 }
 /***************************
 ****************************
@@ -1726,6 +1730,25 @@ Dashboard Styles
     padding: 0;
     text-align: center;
   }
+}
+.empty-box.client-details,
+.empty-box.events-summary,
+.empty-box.order-summary {
+  padding-top: 47px;
+  background: url("../images/ico-client-details.png") no-repeat 50% 0;
+}
+.empty-box.client-details p,
+.empty-box.events-summary p,
+.empty-box.order-summary p {
+  margin-bottom: 10px;
+}
+.empty-box.events-summary {
+  background: url("../images/ico-event-summary.png") no-repeat 50% 0;
+}
+.empty-box.order-summary {
+  background: url("../images/ico-order-summary.png") no-repeat 50% 0;
+  margin-top: 70px;
+  padding-bottom: 70px;
 }
 .widgets-sidebar .widget {
   margin-bottom: 40px;
