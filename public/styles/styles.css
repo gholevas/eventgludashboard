@@ -218,6 +218,23 @@ Button & Links Styles
 .eg-btn.btn-small .fa {
   color: #9c9c9c;
 }
+.direction {
+  display: inline-block;
+  height: 27px;
+  line-height: 27px;
+  width: 27px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #83c23f;
+  color: white;
+}
+.direction .fa {
+  vertical-align: baseline;
+}
+.direction:hover {
+  background-color: #74ab38;
+  color: white;
+}
 /***************************
 ****************************
 Header Styles
@@ -438,7 +455,6 @@ Header Styles
 }
 #header .user {
   float: right;
-  margin-left: 25px;
 }
 #header .toggler-wrapper {
   float: right;
@@ -825,10 +841,9 @@ Manage Venue Details
 .dropdown > .btn {
   color: #636363;
   height: 40px;
-  line-height: 40px;
   position: relative;
   text-align: left;
-  padding: 0 15px;
+  padding: 0 35px 0 15px;
 }
 .dropdown > .btn .fa {
   position: absolute;
@@ -1430,6 +1445,7 @@ Menu Styles
   .week-price-container .overflow-x-scroll {
     overflow-x: scroll;
     margin: 0 -30px;
+    min-height: 144px;
   }
   .week-price-container .overflow-x-scroll .week-wrapper {
     margin: 0;
@@ -1444,55 +1460,71 @@ Menu Styles
 }
 @media (max-width: 767px) {
   .week-price-container .week-wrapper {
-    width: 735px;
+    width: 742px;
+  }
+}
+.week-wrapper .day {
+  float: left;
+  width: 14.1691%;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .week-wrapper .day {
+    width: 14.1433%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .week-wrapper .day {
+    width: 14.148%;
   }
 }
 @media (max-width: 767px) {
-  .week-price-container .week-wrapper .day {
+  .week-wrapper .day {
     width: 105px;
   }
 }
-.week-wrapper {
-  border-top: 1px solid #dcdcdc;
-  border-bottom: 1px solid #dcdcdc;
-}
-.week-wrapper .day {
-  border-right: 1px solid #dcdcdc;
-  float: left;
-  width: 14.28571429%;
-  padding: 15px 18px;
+.day {
   height: 142px;
-  color: #464646;
   font-size: 13px;
+  color: #464646;
   position: relative;
   cursor: pointer;
+  padding: 15px 18px;
+  outline: 1px solid #dcdcdc;
+  margin-top: 1px;
+  margin-left: 1px;
 }
-.week-wrapper .day:last-child {
-  border-right: none;
+.day.off {
+  background-color: #f6f6f6;
 }
-.week-wrapper .day.selected {
+.day.off .meta > span {
+  color: #c2c2c2;
+}
+.day.off .meta .price {
+  color: #c2c2c2;
+}
+.day.selected {
   background-color: #f6ffeb;
 }
-.week-wrapper .day.closed {
+.day.closed {
   background-color: #fff4f0;
 }
-.week-wrapper .day.closed .meta > span {
+.day.closed .meta > span {
   font-family: 'proxima_nova_semibold';
   text-transform: uppercase;
   font-size: 13px;
   color: #f26522;
   font-size: 13px !important;
 }
-.week-wrapper .day .meta {
+.day .meta {
   position: absolute;
   bottom: 15px;
   left: 15px;
   line-height: normal;
 }
-.week-wrapper .day .meta span:not(.price) {
+.day .meta span:not(.price) {
   font-size: 12px;
 }
-.week-wrapper .day .meta .price {
+.day .meta .price {
   font-size: 20px;
   color: #8dc63f;
 }
@@ -1906,7 +1938,10 @@ Events Styles
 .events-selector .selector-wrapper {
   float: right;
 }
-.events-selector .selector-wrapper > span {
+.events-selector .selector-wrapper .dropdown .btn {
+  width: 125px;
+}
+.selector-wrapper > span {
   color: #636363;
   float: left;
   line-height: 40px;
@@ -1914,12 +1949,9 @@ Events Styles
   font-size: 14px;
   margin-right: 17px;
 }
-.events-selector .selector-wrapper .dropdown {
+.selector-wrapper .dropdown {
   float: left;
   color: #636363;
-}
-.events-selector .selector-wrapper .dropdown .btn {
-  width: 125px;
 }
 .pagination li a {
   color: #83c23f;
@@ -2088,4 +2120,141 @@ Notes Styles
 }
 .note:first-child > a {
   top: -5px;
+}
+/***************************
+****************************
+Calendars Styles
+****************************
+***************************/
+.calendar-page #content .content-wrapper {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .calendar-page #content .content-wrapper > .content {
+    padding-top: 15px;
+  }
+}
+.month-title {
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .month-title {
+    margin-bottom: 15px;
+  }
+}
+.month-title h4 {
+  text-transform: uppercase;
+  float: left;
+  line-height: 40px;
+}
+.month-title .selector-wrapper {
+  float: right;
+}
+.month-controls {
+  margin: 0 -30px;
+  text-align: center;
+  padding: 8px 0;
+  border-top: 1px solid #dcdcdc;
+}
+.month-controls > div {
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
+  border-right: 1px solid #dcdcdc;
+}
+.month-controls > div:last-child {
+  border-right: none;
+}
+.month-controls > div > * {
+  vertical-align: middle;
+}
+.month-controls > div .month {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.day-titles {
+  margin: 0 -30px;
+  border-top: 1px solid #dcdcdc;
+}
+.day-titles > div {
+  float: left;
+  outline: 1px solid #f8f8f8;
+  margin-top: 1px;
+  margin-left: 1px;
+  color: black;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  line-height: 37px;
+  padding: 0 13px;
+  width: 14.1988%;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .day-titles > div {
+    width: 14.18%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .day-titles > div {
+    width: 14.148%;
+  }
+}
+@media (max-width: 767px) {
+  .day-titles > div {
+    width: 100%;
+  }
+}
+.month-wrapper {
+  margin: 0 -30px -30px;
+}
+.month-wrapper .day {
+  float: left;
+  width: 14.1988%;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .month-wrapper .day {
+    width: 14.18%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .month-wrapper .day {
+    width: 14.148%;
+  }
+}
+@media (max-width: 767px) {
+  .month-wrapper .day {
+    width: 100%;
+  }
+}
+.month-wrapper .day .name {
+  font-size: 15px;
+  color: #c2c2c2;
+}
+.calendar-selector-mobile {
+  padding-top: 17px;
+}
+.calendar-selector-mobile .selector-wrapper {
+  position: relative;
+}
+.calendar-selector-mobile .selector-wrapper > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container {
+  width: 100%;
+  padding-left: 45px;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown {
+  width: 100%;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown .dropdown-menu {
+  width: 100%;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown .btn {
+  width: 100%;
+}
+.calendar-selector-mobile + #content {
+  padding-top: 17px;
 }

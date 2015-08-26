@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsGlue">
+<head>
+  <title>Calendar Event Glü</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/styles/libs.min.css">
+  <link rel="stylesheet" href="public/styles/styles.min.css">
+</head>
+<body class="calendar-page">
+<header id="header">
+  <div class="header-border-top"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="logo"><a href="">Events Glü</a></h1>
+
+        <div class="user hide-xs">
+          <div class="link clearfix">
+            <img src="public/images/content/user.png" alt=""/>
+            <span class="collapsed" data-toggle="collapse" data-target="#user-menu">the pub rock <i
+              class="fa fa-caret-down"></i></span>
+          </div>
+          <ul id="user-menu" class="user-menu list-unstyled collapse">
+            <li><a href="">Manage Venue</a></li>
+            <li><a href="">Log Out</a></li>
+          </ul>
+        </div>
+
+        <nav class="main-nav hide-xs">
+          <ul class="list-unstyled clearfix">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Events</a></li>
+            <li class="active"><a href="">Calendar</a></li>
+          </ul>
+        </nav>
+
+        <div class="toggler-wrapper show-xs">
+          <span class="toggler collapsed" data-toggle="collapse" data-target="#mobile-nav">
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="mobile-nav" class="mobile-nav collapse hide-s hide-m hide-xl">
+  <ul class="list-unstyled clearfix">
+    <li><a href="">Dashboard</a></li>
+    <li><a href="">Events</a></li>
+    <li class="active"><a href="">Calendar</a></li>
+  </ul>
+  <div class="user">
+    <div class="link clearfix">
+      <img src="public/images/content/user.png" alt=""/>
+      <span>the pub rock</span>
+    </div>
+    <ul id="user-menu-mobile" class="user-menu list-unstyled">
+      <li><a href="">Manage Venue</a></li>
+      <li><a href="">Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h5>Calendars</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="calendar-selector" class="calendar-selector-mobile show-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="selector-wrapper clearfix">
+          <span>Show</span>
+
+          <div class="drop-down-container">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                      data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                Deluxe Room
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Deluxe Room</a></li>
+                <li><a href="#">Deluxe Room</a></li>
+                <li><a href="#">Deluxe Room</a></li>
+                <li><a href="#">Deluxe Room</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="month-title clearfix">
+              <h4>deluxe room calendar</h4>
+
+              <div class="selector-wrapper clearfix hide-xs">
+                <span>Show</span>
+
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                          data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                    Deluxe Room
+                    <span class="fa fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Deluxe Room</a></li>
+                    <li><a href="#">Deluxe Room</a></li>
+                    <li><a href="#">Deluxe Room</a></li>
+                    <li><a href="#">Deluxe Room</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="month-controls">
+              <div><a href="" class="direction"><i class="fa fa-chevron-left"></i></a></div>
+              <div><span class="month">November 2015</span></div>
+              <div><a href="" class="direction"><i class="fa fa-chevron-right"></i></a></div>
+            </div>
+            <div class="day-titles clearfix hide-xs">
+              <div>Monday</div>
+              <div>Tuesday</div>
+              <div>Wednesday</div>
+              <div>Thursday</div>
+              <div>Friday</div>
+              <div>Saturday</div>
+              <div>Sunday</div>
+            </div>
+            <div class="month-wrapper clearfix">
+              <div class="day off">
+                <span class="name">26</span>
+              </div>
+              <div class="day off">
+                <span class="name">27</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day off">
+                <span class="name">28</span>
+              </div>
+              <div class="day off">
+                <span class="name">29</span>
+              </div>
+              <div class="day off">
+                <span class="name">30</span>
+              </div>
+              <div class="day off">
+                <span class="name">31</span>
+              </div>
+              <div class="day closed">
+                <span class="name">1</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+              <div class="day">
+                <span class="name">2</span>
+              </div>
+              <div class="day">
+                <span class="name">3</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day">
+                <span class="name">4</span>
+              </div>
+              <div class="day">
+                <span class="name">5</span>
+              </div>
+              <div class="day">
+                <span class="name">6</span>
+              </div>
+              <div class="day">
+                <span class="name">7</span>
+              </div>
+              <div class="day closed">
+                <span class="name">8</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+              <div class="day">
+                <span class="name">9</span>
+              </div>
+              <div class="day">
+                <span class="name">10</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day">
+                <span class="name">11</span>
+              </div>
+              <div class="day">
+                <span class="name">12</span>
+              </div>
+              <div class="day">
+                <span class="name">13</span>
+              </div>
+              <div class="day">
+                <span class="name">14</span>
+              </div>
+              <div class="day closed">
+                <span class="name">15</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+              <div class="day">
+                <span class="name">12</span>
+              </div>
+              <div class="day">
+                <span class="name">17</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day">
+                <span class="name">18</span>
+              </div>
+              <div class="day">
+                <span class="name">19</span>
+              </div>
+              <div class="day">
+                <span class="name">20</span>
+              </div>
+              <div class="day">
+                <span class="name">21</span>
+              </div>
+              <div class="day closed">
+                <span class="name">22</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+              <div class="day">
+                <span class="name">23</span>
+              </div>
+              <div class="day">
+                <span class="name">24</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day">
+                <span class="name">25</span>
+              </div>
+              <div class="day">
+                <span class="name">26</span>
+              </div>
+              <div class="day">
+                <span class="name">27</span>
+              </div>
+              <div class="day">
+                <span class="name">28</span>
+              </div>
+              <div class="day closed">
+                <span class="name">29</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+              <div class="day">
+                <span class="name">30</span>
+              </div>
+              <div class="day off">
+                <span class="name">1</span>
+
+                <div class="meta">
+                  <span>Minimun</span>
+
+                  <div class="price">$2,000</div>
+                </div>
+              </div>
+              <div class="day off">
+                <span class="name">2</span>
+              </div>
+              <div class="day off">
+                <span class="name">3</span>
+              </div>
+              <div class="day off">
+                <span class="name">4</span>
+              </div>
+              <div class="day off">
+                <span class="name">5</span>
+              </div>
+              <div class="day off closed">
+                <span class="name">6</span>
+                <span class="meta"><span>Closed</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="logo-wrapper">
+          <h1 class="logo color"><a href="">EventsGlü</a></h1>
+        </div>
+        <div class="bottom clearfix">
+          <p>&copy; 2015 Events Glü, Inc. All Rights Reserved.</p>
+
+          <p><a href="">Privacy Policy</a> <span>&bull;</span> <a href="">Terms &amp; Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="public/js/libs.min.js"></script>
+<script src="public/js/main.min.js"></script>
+</body>
+</html>
