@@ -455,7 +455,6 @@ Header Styles
 }
 #header .user {
   float: right;
-  margin-left: 25px;
 }
 #header .toggler-wrapper {
   float: right;
@@ -2130,8 +2129,18 @@ Calendars Styles
 .calendar-page #content .content-wrapper {
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .calendar-page #content .content-wrapper > .content {
+    padding-top: 15px;
+  }
+}
 .month-title {
   margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .month-title {
+    margin-bottom: 15px;
+  }
 }
 .month-title h4 {
   text-transform: uppercase;
@@ -2221,4 +2230,31 @@ Calendars Styles
 .month-wrapper .day .name {
   font-size: 15px;
   color: #c2c2c2;
+}
+.calendar-selector-mobile {
+  padding-top: 17px;
+}
+.calendar-selector-mobile .selector-wrapper {
+  position: relative;
+}
+.calendar-selector-mobile .selector-wrapper > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container {
+  width: 100%;
+  padding-left: 45px;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown {
+  width: 100%;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown .dropdown-menu {
+  width: 100%;
+}
+.calendar-selector-mobile .selector-wrapper .drop-down-container .dropdown .btn {
+  width: 100%;
+}
+.calendar-selector-mobile + #content {
+  padding-top: 17px;
 }
