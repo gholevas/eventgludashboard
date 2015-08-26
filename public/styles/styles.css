@@ -1480,16 +1480,16 @@ Menu Styles
 }
 .week-wrapper .day {
   float: left;
-  width: 14.1691%;
+  width: 14.168%;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .week-wrapper .day {
-    width: 14.1433%;
+    width: 14.142%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .week-wrapper .day {
-    width: 14.148%;
+    width: 14.147%;
   }
 }
 @media (max-width: 767px) {
@@ -2209,7 +2209,7 @@ Calendars Styles
   background-color: #f8f8f8;
   line-height: 37px;
   padding: 0 13px;
-  width: 14.1988%;
+  width: 14.1984%;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .day-titles > div {
@@ -2218,7 +2218,7 @@ Calendars Styles
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .day-titles > div {
-    width: 14.148%;
+    width: 14.147%;
   }
 }
 @media (max-width: 767px) {
@@ -2231,7 +2231,7 @@ Calendars Styles
 }
 .month-wrapper .day {
   float: left;
-  width: 14.1988%;
+  width: 14.1984%;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .month-wrapper .day {
@@ -2240,7 +2240,7 @@ Calendars Styles
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .month-wrapper .day {
-    width: 14.148%;
+    width: 14.147%;
   }
 }
 @media (max-width: 767px) {
