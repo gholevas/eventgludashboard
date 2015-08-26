@@ -208,6 +208,16 @@ Button & Links Styles
   background-color: #83c23f;
   color: white;
 }
+.eg-btn.btn-small {
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  height: 34px;
+  line-height: 34px;
+  width: 45px;
+}
+.eg-btn.btn-small .fa {
+  color: #9c9c9c;
+}
 /***************************
 ****************************
 Header Styles
@@ -692,6 +702,7 @@ Content Styles
   line-height: 32px;
   font-size: 22px;
   float: right;
+  padding: 0;
 }
 /***************************
 ****************************
@@ -729,19 +740,12 @@ Manage Venue Details
 }
 .form-group.double > div.dropdown .btn-default {
   width: 100%;
-  position: relative;
-  text-align: left;
 }
 .form-group.double > div.dropdown .btn-default:hover,
 .form-group.double > div.dropdown .btn-default:visited,
 .form-group.double > div.dropdown .btn-default:active,
 .form-group.double > div.dropdown .btn-default:focus {
   background-color: white;
-}
-.form-group.double > div.dropdown .btn-default .fa {
-  position: absolute;
-  top: 10px;
-  right: 14px;
 }
 .form-group.double > div.dropdown.open .btn-default {
   border-color: #83c23f;
@@ -750,11 +754,6 @@ Manage Venue Details
 }
 .form-group.double > div.dropdown ul {
   width: 100%;
-}
-@media (max-width: 767px) {
-  .form-group.double > div.dropdown + .dropdown {
-    margin-top: 20px;
-  }
 }
 .form-group.file-upload .file {
   margin-top: 10px;
@@ -771,6 +770,26 @@ Manage Venue Details
   display: inline-block;
   line-height: 38px;
   margin-left: 12px;
+}
+.form-group.calendar {
+  position: relative;
+}
+.form-group.calendar input {
+  margin-right: 60px;
+  width: auto;
+}
+@media (max-width: 767px) {
+  .form-group.calendar input {
+    width: 100%;
+  }
+}
+.form-group.calendar .btn-small {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.form-group.single-dropdown .dropdown .btn {
+  width: 100%;
 }
 .form-control {
   resize: none;
@@ -798,20 +817,23 @@ Manage Venue Details
   }
 }
 .form-item.select-wrapper .dropdown > .btn {
-  height: 40px;
-  line-height: 40px;
-  padding: 0 15px;
-  text-align: left;
   width: 100%;
-  position: relative;
-}
-.form-item.select-wrapper .dropdown > .btn .fa {
-  position: absolute;
-  right: 15px;
-  top: 13px;
 }
 .form-item.select-wrapper .dropdown .dropdown-menu {
   width: 100%;
+}
+.dropdown > .btn {
+  color: #636363;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: left;
+  padding: 0 15px;
+}
+.dropdown > .btn .fa {
+  position: absolute;
+  right: 15px;
+  top: 13px;
 }
 .map-wrapper {
   margin-top: 15px;
@@ -1897,18 +1919,7 @@ Events Styles
   color: #636363;
 }
 .events-selector .selector-wrapper .dropdown .btn {
-  color: #636363;
-  line-height: 40px;
-  height: 40px;
   width: 125px;
-  padding: 0 16px;
-  text-align: left;
-  position: relative;
-}
-.events-selector .selector-wrapper .dropdown .btn span {
-  position: absolute;
-  right: 16px;
-  top: 18px;
 }
 .pagination li a {
   color: #83c23f;

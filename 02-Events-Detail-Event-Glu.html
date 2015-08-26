@@ -136,7 +136,9 @@
             <div class="content-wrapper">
               <div class="title clearfix">
                 <h5>Event summary</h5>
-                <a href="" class="conf"><i class="fa fa-cog"></i></a>
+                <button class="conf" data-toggle="modal" data-target="#edit-event-summary-modal"><i
+                  class="fa fa-cog"></i>
+                </button>
               </div>
               <div class="content">
                 <div class="event-details-wrapper">
@@ -292,6 +294,95 @@
     </div>
   </div>
 </footer>
+
+<div class="modal fade" id="edit-event-summary-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="my-modal">
+      <div class="my-modal-title">
+        <h5>Edit event summary</h5>
+      </div>
+      <div class="my-modal-content">
+        <div class="my-modal-form">
+          <div class="form-group calendar">
+            <label for="">Date</label>
+            <input type="text" class="form-control">
+
+            <a href="" class="eg-btn btn-small"><span><i class="fa icon-calendar_icon"></i></span></a>
+          </div>
+          <div class="form-group double clearfix">
+
+            <div class="dropdown">
+              <label>Time</label>
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                12:30 PM
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">12:30 PM </a></li>
+                <li><a href="#">12:30 PM </a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <label>&nbsp;</label>
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-2" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                6:00 PM
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">6:00 PM</a></li>
+                <li><a href="#">6:00 PM</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group single-dropdown">
+            <label>Room</label>
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-3" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                Main Room
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdown-3">
+                <li><a href="#">Main Room</a></li>
+                <li><a href="#">Main Room</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group double clearfix">
+            <div class="dropdown">
+              <label>Guests</label>
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-5" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                50 Adults
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">50 Adults</a></li>
+                <li><a href="#">50 Adults</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <label>&nbsp;</label>
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-4" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                60 Kids
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">60 Kids </a></li>
+                <li><a href="#">60 Kids </a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="eg-btn btn-main">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="public/js/libs.min.js"></script>
 <script src="public/js/main.min.js"></script>
 </body>
