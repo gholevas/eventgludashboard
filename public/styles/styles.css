@@ -1838,6 +1838,12 @@ Events Styles
   border-right: none;
   padding-right: 0;
 }
+@media (max-width: 767px) {
+  .events-controls > div {
+    padding: 0;
+    border: none;
+  }
+}
 .events-controls input {
   background: url("../images/ico-glass.png") no-repeat 0 50%;
   padding: 0;
