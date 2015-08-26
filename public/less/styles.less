@@ -32,6 +32,7 @@
 @gray-22: #ececec;
 @gray-23: #bcbcbc;
 @gray-24: #cccccc;
+@gray-25: #9c9c9c;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -328,6 +329,18 @@ Button & Links Styles
     &:hover {
       background-color: @green-1;
       color: white;
+    }
+  }
+
+  &.btn-small {
+    .border-radius(2px);
+    .border(1px, @gray-24);
+    height: 34px;
+    line-height: 34px;
+    width: 45px;
+
+    .fa {
+      color: @gray-25;
     }
   }
 }
@@ -907,6 +920,7 @@ Content Styles
     line-height: 32px;
     font-size: 22px;
     float: right;
+    padding: 0;
   }
 }
 
@@ -951,20 +965,12 @@ Manage Venue Details
       &.dropdown {
         .btn-default {
           width: 100%;
-          position: relative;
-          text-align: left;
 
           &:hover,
           &:visited,
           &:active,
           &:focus {
             background-color: white;
-          }
-
-          .fa {
-            position: absolute;
-            top: 10px;
-            right: 14px;
           }
         }
 
@@ -978,12 +984,6 @@ Manage Venue Details
 
         ul {
           width: 100%;
-        }
-
-        & + .dropdown {
-          @media @xs {
-            margin-top: 20px;
-          }
         }
       }
     }
@@ -1005,6 +1005,33 @@ Manage Venue Details
         display: inline-block;
         line-height: 38px;
         margin-left: 12px;
+      }
+    }
+  }
+
+  &.calendar {
+    position: relative;
+
+    input {
+      margin-right: 60px;
+      width: auto;
+
+      @media @xs {
+        width: 100%;
+      }
+    }
+
+    .btn-small {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &.single-dropdown {
+    .dropdown {
+      .btn {
+        width: 100%;
       }
     }
   }
@@ -1043,23 +1070,30 @@ Manage Venue Details
       }
 
       > .btn {
-        height: 40px;
-        line-height: 40px;
-        padding: 0 15px;
-        text-align: left;
         width: 100%;
-        position: relative;
-
-        .fa {
-          position: absolute;
-          right: 15px;
-          top: 13px;
-        }
       }
 
       .dropdown-menu {
         width: 100%;
       }
+    }
+  }
+}
+
+.dropdown {
+
+  > .btn {
+    color: @gray-9;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: left;
+    padding: 0 15px;
+
+    .fa {
+      position: absolute;
+      right: 15px;
+      top: 13px;
     }
   }
 }
@@ -2242,19 +2276,7 @@ Events Styles
       color: @gray-9;
 
       .btn {
-        color: @gray-9;
-        line-height: 40px;
-        height: 40px;
         width: 125px;
-        padding: 0 16px;
-        text-align: left;
-        position: relative;
-
-        span {
-          position: absolute;
-          right: 16px;
-          top: 18px;
-        }
       }
     }
   }
