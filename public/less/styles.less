@@ -33,6 +33,10 @@
 @gray-23: #bcbcbc;
 @gray-24: #cccccc;
 @gray-25: #9c9c9c;
+@gray-26: #f6f6f6;
+@gray-27: #c2c2c2;
+@gray-28: #898989;
+@gray-29: #f8f8f8;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -342,6 +346,26 @@ Button & Links Styles
     .fa {
       color: @gray-25;
     }
+  }
+}
+
+.direction {
+  display: inline-block;
+  height: 27px;
+  line-height: 27px;
+  width: 27px;
+  text-align: center;
+  .border-radius(100%);
+  background-color: @green-1;
+  color: white;
+
+  .fa {
+    vertical-align: baseline;
+  }
+
+  &:hover {
+    background-color: @green-2;
+    color: white;
   }
 }
 
@@ -1085,10 +1109,9 @@ Manage Venue Details
   > .btn {
     color: @gray-9;
     height: 40px;
-    line-height: 40px;
     position: relative;
     text-align: left;
-    padding: 0 15px;
+    padding: 0 35px 0 15px;
 
     .fa {
       position: absolute;
@@ -1675,6 +1698,7 @@ Menu Styles
     @media @xs {
       overflow-x: scroll;
       margin: 0 -30px;
+      min-height: 144px;
 
       .week-wrapper {
         margin: 0;
@@ -1691,66 +1715,83 @@ Menu Styles
     margin: 0 -30px;
 
     @media @xs {
-      width: 735px;
-    }
-
-    .day {
-      @media @xs {
-        width: 105px;
-      }
+      width: 742px;
     }
   }
 }
 
 .week-wrapper {
-  .border-top(1px, @gray-7);
-  .border-bottom(1px, @gray-7);
-
   .day {
-    .border-right(1px, @gray-7);
     float: left;
-    width: @week-width;
-    padding: 15px 18px;
-    height: 142px;
-    font-size: 13px;
-    color: @gray-19;
-    font-size: 13px;
-    position: relative;
-    cursor: pointer;
+    width: 14.1691%;
 
-    &:last-child {
-      border-right: none;
+    @media @medium {
+      width: 14.1433%;
     }
 
-    &.selected {
-      background-color: @green-4;
+    @media @small {
+      width: 14.148%;
     }
 
-    &.closed {
-      background-color: @red-3;
-
-      .meta {
-        > span {
-          .link-type(13px, @red-1);
-          font-size: 13px !important;
-        }
-      }
+    @media @xs {
+      width: 105px;
     }
+  }
+}
+
+.day {
+  height: 142px;
+  font-size: 13px;
+  color: @gray-19;
+  position: relative;
+  cursor: pointer;
+  padding: 15px 18px;
+  outline: 1px solid @gray-7;
+  margin-top: 1px;
+  margin-left: 1px;
+
+  &.off {
+    background-color: @gray-26;
 
     .meta {
-      position: absolute;
-      bottom: 15px;
-      left: 15px;
-      line-height: normal;
-
-      span:not(.price) {
-        font-size: 12px;
+      > span {
+        color: @gray-27;
       }
 
       .price {
-        font-size: 20px;
-        color: @green-5;
+        color: @gray-27;
       }
+    }
+  }
+
+  &.selected {
+    background-color: @green-4;
+  }
+
+  &.closed {
+    background-color: @red-3;
+
+    .meta {
+      > span {
+        .link-type(13px, @red-1);
+        font-size: 13px !important;
+      }
+    }
+  }
+
+  .meta {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    line-height: normal;
+
+    span:not(.price) {
+      font-size: 12px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: @green-5;
     }
   }
 }
@@ -2262,23 +2303,27 @@ Events Styles
   .selector-wrapper {
     float: right;
 
-    > span {
-      color: @gray-9;
-      float: left;
-      line-height: 40px;
-      height: 40px;
-      font-size: 14px;
-      margin-right: 17px;
-    }
-
     .dropdown {
-      float: left;
-      color: @gray-9;
-
       .btn {
         width: 125px;
       }
     }
+  }
+}
+
+.selector-wrapper {
+  > span {
+    color: @gray-9;
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px;
+    margin-right: 17px;
+  }
+
+  .dropdown {
+    float: left;
+    color: @gray-9;
   }
 }
 
@@ -2481,6 +2526,119 @@ Notes Styles
 
     > a {
       top: -5px;
+    }
+  }
+}
+
+/***************************
+****************************
+Calendars Styles
+****************************
+***************************/
+
+.calendar-page {
+  #content {
+    .content-wrapper {
+      overflow: hidden;
+    }
+  }
+}
+
+.month-title {
+  margin-bottom: 30px;
+
+  h4 {
+    text-transform: uppercase;
+    float: left;
+    line-height: 40px;
+  }
+
+  .selector-wrapper {
+    float: right;
+  }
+}
+
+.month-controls {
+  margin: 0 -30px;
+  text-align: center;
+  padding: 8px 0;
+  .border-top(1px, @gray-7);
+
+  > div {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    .border-right(1px, @gray-7);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    > * {
+      vertical-align: middle;
+    }
+
+    .month {
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.day-titles {
+  margin: 0 -30px;
+  .border-top(1px, @gray-7);
+
+  > div {
+    float: left;
+    outline: 1px solid @gray-29;
+    margin-top: 1px;
+    margin-left: 1px;
+    color: black;
+    font-weight: bold;
+    background-color: @gray-29;
+    line-height: 37px;
+    padding: 0 13px;
+    width: 14.1988%;
+
+    @media @medium {
+      width: 14.18%;
+    }
+
+    @media @small {
+      width: 14.148%;
+    }
+
+    @media @xs {
+      width: 100%;
+    }
+  }
+}
+
+.month-wrapper {
+  margin: 0 -30px -30px;
+
+  .day {
+    float: left;
+    width: 14.1988%;
+
+    @media @medium {
+      width: 14.18%;
+    }
+
+    @media @small {
+      width: 14.148%;
+    }
+
+    @media @xs {
+      width: 100%;
+    }
+
+    .name {
+      font-size: 15px;
+      color: @gray-27;
     }
   }
 }
