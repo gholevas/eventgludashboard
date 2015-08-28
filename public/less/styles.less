@@ -37,6 +37,7 @@
 @gray-27: #c2c2c2;
 @gray-28: #898989;
 @gray-29: #f8f8f8;
+@gray-30: #ebebeb;
 
 @red-1: #f26522;
 @red-2: #da5d20;
@@ -1503,6 +1504,93 @@ Modal Styles
   .my-modal-content {
     padding: 0 30px;
   }
+
+  &.eg-tooltip {
+    > * {
+      padding: 14px 28px;
+    }
+
+    .my-modal-content {
+      .my-modal-form {
+        font-size: 13px;
+        color: @gray-4;
+        padding: 0;
+
+        .form-group {
+          margin: 0 -28px 18px -28px;
+          padding: 0 28px 18px 28px;
+          .border-bottom(1px, @gray-30);
+
+          &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+
+          &.double {
+            div {
+              & + div {
+                @media @xs {
+                  margin-top: 15px;
+                }
+              }
+            }
+          }
+
+          &.room-minimum {
+            .dropdown {
+              width: 50%;
+              padding-right: 5px;
+
+              > * {
+                width: 100%;
+              }
+
+              & + .text {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          &.pricing-slots {
+            display: none;
+            .border-top(1px, @gray-30);
+            padding-top: 18px;
+
+            > a {
+              display: block;
+              margin: 10px 0;
+              color: @green-1;
+
+              &:hover {
+                color: @green-2;
+              }
+            }
+          }
+
+          &.nmb {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+      }
+
+      .my-modal-form-btn-wrapper {
+        padding: 14px 28px 0 28px;
+        margin: 0 -28px;
+        text-align: right;
+
+        .eg-btn {
+          width: auto;
+          height: 34px;
+          line-height: 36px;
+          padding: 0 18px;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }
 
 .add-photos {
@@ -2760,93 +2848,6 @@ Calendars Styles
 Calendars Styles
 ****************************
 ***************************/
-
-.eg-tooltip {
-  width: 415px;
-
-  @media @xs {
-    width: 100%;
-  }
-
-  .my-modal {
-
-    > * {
-      padding: 14px 28px;
-    }
-
-    .my-modal-content {
-      .my-modal-form {
-        font-size: 13px;
-        color: @gray-4;
-        padding: 0;
-
-        .form-group {
-          margin: 0 -28px 18px -28px;
-          padding: 0 28px 18px 28px;
-          .border-bottom(1px, @gray-8);
-
-          &:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-          }
-
-          &.double {
-            div {
-              & + div {
-                @media @xs {
-                  margin-top: 15px;
-                }
-              }
-            }
-          }
-
-          &.room-minimum {
-            .dropdown {
-              width: 50%;
-              padding-right: 5px;
-
-              > * {
-                width: 100%;
-              }
-
-              & + .text {
-                margin-top: 10px;
-              }
-            }
-          }
-
-          &.pricing-slots {
-            > a {
-              display: block;
-              margin: 10px 0;
-              color: @green-1;
-
-              &:hover {
-                color: @green-2;
-              }
-            }
-          }
-        }
-      }
-
-      .my-modal-form-btn-wrapper {
-        padding: 14px 28px 0 28px;
-        margin: 0 -28px;
-        text-align: right;
-
-        .eg-btn {
-          width: auto;
-          height: 34px;
-          line-height: 36px;
-          padding: 0 18px;
-          font-size: 14px;
-          margin-left: 10px;
-        }
-      }
-    }
-  }
-}
 
 .dollar-input {
   font-size: 13px;

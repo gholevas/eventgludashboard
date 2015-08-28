@@ -142,7 +142,7 @@
                 <p>Add photos of areas guests have access to. You can always come back later and add more.</p>
 
                 <div class="photos-container clearfix">
-                  <div class="photo-container active" show-btn>
+                  <div class="photo-container active">
                     <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
 
                     <div class="img-wrapper">
@@ -153,7 +153,7 @@
                               placeholder="Photo Highlights"></textarea>
                     <button class="eg-btn btn-main">Save</button>
                   </div>
-                  <div class="photo-container" show-btn>
+                  <div class="photo-container">
                     <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
 
                     <div class="img-wrapper">
@@ -164,7 +164,7 @@
                               placeholder="Photo Highlights"></textarea>
                     <button class="eg-btn btn-main">Save</button>
                   </div>
-                  <div class="photo-container" show-btn>
+                  <div class="photo-container">
                     <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
 
                     <div class="img-wrapper">
@@ -175,7 +175,7 @@
                               placeholder="Photo Highlights"></textarea>
                     <button class="eg-btn btn-main">Save</button>
                   </div>
-                  <div class="photo-container" show-btn>
+                  <div class="photo-container">
                     <a href="" class="eg-btn btn-transparent"><i class="fa fa-times"></i> Delete</a>
 
                     <div class="img-wrapper">
@@ -206,10 +206,10 @@
 
               <div class="overflow-x-scroll">
                 <div class="week-wrapper clearfix">
-                  <div class="day eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Sun</span>
                   </div>
-                  <div class="day eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Mon</span>
 
                     <div class="meta">
@@ -218,19 +218,19 @@
                       <div class="price">$2,000</div>
                     </div>
                   </div>
-                  <div class="day eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Tue</span>
                   </div>
-                  <div class="day selected eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day selected" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Wed</span>
                   </div>
-                  <div class="day eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Thu</span>
                   </div>
-                  <div class="day eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Fri</span>
                   </div>
-                  <div class="day closed eg-tipped" data-tipped-options="inline: 'calendar-tipped'">
+                  <div class="day closed" data-toggle="modal" data-target="#day-modal">
                     <span class="name">Sat</span>
 
                   <span class="meta">
@@ -332,175 +332,175 @@
     </div>
   </div>
 </div>
-<div class="hidden">
-  <div id="calendar-tipped">
-    <div class="eg-tooltip">
-      <div class="my-modal">
-        <div class="my-modal-title eg-switch clearfix">
-          <h5>Wednesday</h5>
 
-          <div class="eg-switch">
-            <span class="eg-switch-label">Open</span>
-            <input type="checkbox" class="js-switch" checked/>
-          </div>
+<div class="modal fade" id="day-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="my-modal eg-tooltip">
+      <div class="my-modal-title eg-switch clearfix">
+        <h5>Wednesday</h5>
+
+        <div class="eg-switch">
+          <span class="eg-switch-label">Open</span>
+          <input type="checkbox" class="js-switch" checked/>
         </div>
-        <div class="my-modal-content">
-          <div class="my-modal-form">
-            <div class="form-group double clearfix">
+      </div>
+      <div class="my-modal-content">
+        <div class="my-modal-form">
+          <div class="form-group double clearfix">
           <span class="text">
             <strong>Business Hours</strong>
             <span>Enter the hours available to host an event.</span>
           </span>
 
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="true">
-                  From 06:00pm
-                  <span class="fa fa-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">06:00pm</a></li>
-                  <li><a href="#">06:00pm</a></li>
-                </ul>
-              </div>
-
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="true">
-                  to 04:00am
-                  <span class="fa fa-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">04:00am</a></li>
-                  <li><a href="#">04:00am</a></li>
-                </ul>
-              </div>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                From 06:00pm
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">06:00pm</a></li>
+                <li><a href="#">06:00pm</a></li>
+              </ul>
             </div>
-            <div class="form-group room-minimum">
+
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                to 04:00am
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">04:00am</a></li>
+                <li><a href="#">04:00am</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group room-minimum">
           <span class="text">
             <strong>Room Minimum</strong>
             <span>Enter the standard duration of an event.</span>
           </span>
 
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="true">
-                  4 Hours
-                  <span class="fa fa-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">4 Hours</a></li>
-                  <li><a href="#">4 Hours</a></li>
-                </ul>
-              </div>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                4 Hours
+                <span class="fa fa-caret-down"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">4 Hours</a></li>
+                <li><a href="#">4 Hours</a></li>
+              </ul>
+            </div>
           <span class="text">
             <span>Enter the base minimum spend for this duration</span>
           </span>
 
-              <div class="dollar-input">
-                <span>$</span>
-                <input class="form-control" type="text"/>
-                <span>USD</span>
-              </div>
+            <div class="dollar-input">
+              <span>$</span>
+              <input class="form-control" type="text"/>
+              <span>USD</span>
             </div>
-            <div class="form-group">
-              <input type="checkbox"/>
-              Set custom minimums spend dependent on time
-            </div>
-            <div class="form-group pricing-slots">
+          </div>
+          <div class="form-group nmb">
+            <label>
+              <input type="checkbox" class="show-min"/> Set custom minimums spend dependent on time
+            </label>
+          </div>
+          <div class="form-group pricing-slots">
           <span class="text">
             <strong>Custom Room Minimums</strong>
             <span>Enter time slots and their corresponding minimum spends</span>
           </span>
-              <ul class="list-unstyled">
-                <li class="pricing-slot clearfix">
-                  <div class="spend">
-                    <span>Min. Spend</span>
+            <ul class="list-unstyled">
+              <li class="pricing-slot clearfix">
+                <div class="spend">
+                  <span>Min. Spend</span>
 
-                    <div class="dollar-input">
-                      <span>$</span>
-                      <input class="form-control" type="text"/>
-                      <span>USD</span>
-                    </div>
+                  <div class="dollar-input">
+                    <span>$</span>
+                    <input class="form-control" type="text"/>
+                    <span>USD</span>
                   </div>
-                  <div class="time clearfix">
-                    <span>Time</span>
+                </div>
+                <div class="time clearfix">
+                  <span>Time</span>
 
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                              data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="true">
-                        From 06:00pm
-                        <span class="fa fa-caret-down"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">06:00pm</a></li>
-                        <li><a href="#">06:00pm</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                              data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="true">
-                        to 04:00am
-                        <span class="fa fa-caret-down"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">04:00am</a></li>
-                        <li><a href="#">04:00am</a></li>
-                      </ul>
-                    </div>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      From 06:00pm
+                      <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">06:00pm</a></li>
+                      <li><a href="#">06:00pm</a></li>
+                    </ul>
                   </div>
-                </li>
-                <li class="pricing-slot clearfix">
-                  <div class="spend">
-                    <span>Min. Spend</span>
 
-                    <div class="dollar-input">
-                      <span>$</span>
-                      <input class="form-control" type="text"/>
-                      <span>USD</span>
-                    </div>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      to 04:00am
+                      <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">04:00am</a></li>
+                      <li><a href="#">04:00am</a></li>
+                    </ul>
                   </div>
-                  <div class="time clearfix">
-                    <span>Time</span>
+                </div>
+              </li>
+              <li class="pricing-slot clearfix">
+                <div class="spend">
+                  <span>Min. Spend</span>
 
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                              data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="true">
-                        From 06:00pm
-                        <span class="fa fa-caret-down"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">06:00pm</a></li>
-                        <li><a href="#">06:00pm</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                              data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="true">
-                        to 04:00am
-                        <span class="fa fa-caret-down"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">04:00am</a></li>
-                        <li><a href="#">04:00am</a></li>
-                      </ul>
-                    </div>
+                  <div class="dollar-input">
+                    <span>$</span>
+                    <input class="form-control" type="text"/>
+                    <span>USD</span>
                   </div>
-                </li>
-              </ul>
-              <a href=""><span><i class="fa fa-plus-circle"></i></span> Add a pricing slot</a>
-            </div>
+                </div>
+                <div class="time clearfix">
+                  <span>Time</span>
+
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      From 06:00pm
+                      <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">06:00pm</a></li>
+                      <li><a href="#">06:00pm</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      to 04:00am
+                      <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">04:00am</a></li>
+                      <li><a href="#">04:00am</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a href=""><span><i class="fa fa-plus-circle"></i></span> Add a pricing slot</a>
           </div>
-          <div class="my-modal-form-btn-wrapper">
-            <button class="eg-btn btn-5 close-tooltip">Cancel</button>
-            <button class="eg-btn btn-main">SAve</button>
-          </div>
+        </div>
+        <div class="my-modal-form-btn-wrapper">
+          <button class="eg-btn btn-5" data-dismiss="modal">Cancel</button>
+          <button class="eg-btn btn-main">SAve</button>
         </div>
       </div>
     </div>

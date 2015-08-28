@@ -1228,6 +1228,69 @@ Modal Styles
 .my-modal .my-modal-content {
   padding: 0 30px;
 }
+.my-modal.eg-tooltip > * {
+  padding: 14px 28px;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form {
+  font-size: 13px;
+  color: #252525;
+  padding: 0;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group {
+  margin: 0 -28px 18px -28px;
+  padding: 0 28px 18px 28px;
+  border-bottom: 1px solid #ebebeb;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.double div + div {
+    margin-top: 15px;
+  }
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.room-minimum .dropdown {
+  width: 50%;
+  padding-right: 5px;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.room-minimum .dropdown > * {
+  width: 100%;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.room-minimum .dropdown + .text {
+  margin-top: 10px;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.pricing-slots {
+  display: none;
+  border-top: 1px solid #ebebeb;
+  padding-top: 18px;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.pricing-slots > a {
+  display: block;
+  margin: 10px 0;
+  color: #83c23f;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.pricing-slots > a:hover {
+  color: #74ab38;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group.nmb {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form-btn-wrapper {
+  padding: 14px 28px 0 28px;
+  margin: 0 -28px;
+  text-align: right;
+}
+.my-modal.eg-tooltip .my-modal-content .my-modal-form-btn-wrapper .eg-btn {
+  width: auto;
+  height: 34px;
+  line-height: 36px;
+  padding: 0 18px;
+  font-size: 14px;
+  margin-left: 10px;
+}
 .add-photos {
   padding-bottom: 80px;
   text-align: center;
@@ -2316,68 +2379,6 @@ Calendars Styles
 Calendars Styles
 ****************************
 ***************************/
-.eg-tooltip {
-  width: 415px;
-}
-@media (max-width: 767px) {
-  .eg-tooltip {
-    width: 100%;
-  }
-}
-.eg-tooltip .my-modal > * {
-  padding: 14px 28px;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form {
-  font-size: 13px;
-  color: #252525;
-  padding: 0;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group {
-  margin: 0 -28px 18px -28px;
-  padding: 0 28px 18px 28px;
-  border-bottom: 1px solid #f9f9f9;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-@media (max-width: 767px) {
-  .eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.double div + div {
-    margin-top: 15px;
-  }
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown {
-  width: 50%;
-  padding-right: 5px;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown > * {
-  width: 100%;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown + .text {
-  margin-top: 10px;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.pricing-slots > a {
-  display: block;
-  margin: 10px 0;
-  color: #83c23f;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.pricing-slots > a:hover {
-  color: #74ab38;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper {
-  padding: 14px 28px 0 28px;
-  margin: 0 -28px;
-  text-align: right;
-}
-.eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper .eg-btn {
-  width: auto;
-  height: 34px;
-  line-height: 36px;
-  padding: 0 18px;
-  font-size: 14px;
-  margin-left: 10px;
-}
 .dollar-input {
   font-size: 13px;
   color: #252525;
