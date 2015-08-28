@@ -32,4 +32,7 @@
     });
   });
 
+  var elem = d.querySelector('.js-switch');
+  var init = new Switchery(elem, {size: 'small'});
+
 })(window, document, jQuery);

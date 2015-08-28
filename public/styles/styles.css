@@ -218,6 +218,14 @@ Button & Links Styles
 .eg-btn.btn-small .fa {
   color: #9c9c9c;
 }
+.eg-btn.btn-5 {
+  border-radius: 25px;
+  background-color: #f3f3f3;
+  color: #746a6a;
+}
+.eg-btn.btn-5:hover {
+  background-color: #c1c1c1;
+}
 .direction {
   display: inline-block;
   height: 27px;
@@ -1201,6 +1209,20 @@ Modal Styles
 }
 .my-modal .my-modal-title h5 {
   text-transform: uppercase;
+}
+.my-modal .my-modal-title.eg-switch h5 {
+  line-height: 27px;
+  float: left;
+}
+.my-modal .my-modal-title.eg-switch .eg-switch {
+  float: right;
+  font-size: 13px;
+  height: 27px;
+  line-height: 27px;
+}
+.my-modal .my-modal-title.eg-switch .eg-switch > .eg-switch-label {
+  margin-right: 5px;
+  display: inline-block;
 }
 .my-modal .my-modal-content {
   padding: 0 30px;
@@ -2336,6 +2358,18 @@ Calendars Styles
 }
 .eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.pricing-slots > a:hover {
   color: #74ab38;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper {
+  padding: 14px 28px 0 28px;
+  text-align: right;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper .eg-btn {
+  width: auto;
+  height: 34px;
+  line-height: 36px;
+  padding: 0 18px;
+  font-size: 14px;
+  margin-left: 10px;
 }
 .dollar-input {
   font-size: 13px;
