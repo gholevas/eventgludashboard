@@ -2761,7 +2761,11 @@ Calendars Styles
 ***************************/
 
 .eg-tooltip {
-  .border(1px, @gray-8);
+  width: 415px;
+
+  @media @xs {
+    width: 100%;
+  }
 
   .my-modal {
 
@@ -2875,7 +2879,7 @@ Calendars Styles
     }
 
     &.spend {
-      width: 15%;
+      width: 35%;
 
       @media @xs {
         width: 100%;
@@ -2884,7 +2888,7 @@ Calendars Styles
     }
 
     &.time {
-      width: 85%;
+      width: 65%;
 
       @media @xs {
         width: 100%;
@@ -2892,8 +2896,16 @@ Calendars Styles
 
       .dropdown {
         float: left;
-        width: 50%;
+        width: 55%;
         padding-right: 5px;
+
+        .btn {
+          font-size: 12px;
+
+          .fa {
+            right: 10px;
+          }
+        }
 
         > * {
           width: 100%;
@@ -2902,6 +2914,7 @@ Calendars Styles
         & + .dropdown {
           padding-left: 5px;
           padding-right: 0;
+          width: 45%;
         }
       }
     }

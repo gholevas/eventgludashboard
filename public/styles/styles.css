@@ -2316,7 +2316,12 @@ Calendars Styles
 ****************************
 ***************************/
 .eg-tooltip {
-  border: 1px solid #f9f9f9;
+  width: 415px;
+}
+@media (max-width: 767px) {
+  .eg-tooltip {
+    width: 100%;
+  }
 }
 .eg-tooltip .my-modal > * {
   padding: 14px 28px;
@@ -2401,7 +2406,7 @@ Calendars Styles
   }
 }
 .pricing-slot > div.spend {
-  width: 15%;
+  width: 35%;
 }
 @media (max-width: 767px) {
   .pricing-slot > div.spend {
@@ -2410,7 +2415,7 @@ Calendars Styles
   }
 }
 .pricing-slot > div.time {
-  width: 85%;
+  width: 65%;
 }
 @media (max-width: 767px) {
   .pricing-slot > div.time {
@@ -2419,8 +2424,14 @@ Calendars Styles
 }
 .pricing-slot > div.time .dropdown {
   float: left;
-  width: 50%;
+  width: 55%;
   padding-right: 5px;
+}
+.pricing-slot > div.time .dropdown .btn {
+  font-size: 12px;
+}
+.pricing-slot > div.time .dropdown .btn .fa {
+  right: 10px;
 }
 .pricing-slot > div.time .dropdown > * {
   width: 100%;
@@ -2428,6 +2439,7 @@ Calendars Styles
 .pricing-slot > div.time .dropdown + .dropdown {
   padding-left: 5px;
   padding-right: 0;
+  width: 45%;
 }
 .pricing-slot > div > span {
   display: block;
