@@ -1247,6 +1247,15 @@ Modal Styles
 .my-modal-form .form-group textarea {
   height: 75px;
 }
+.my-modal-form .form-group > .text {
+  display: block;
+  font-size: 13px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.my-modal-form .form-group > .text > * {
+  display: block;
+}
 .my-modal-form .btn-main {
   font-size: 15px;
 }
@@ -2278,4 +2287,99 @@ Calendars Styles
 }
 .calendar-selector-mobile + #content {
   padding-top: 17px;
+}
+/***************************
+****************************
+Calendars Styles
+****************************
+***************************/
+.eg-tooltip {
+  border: 1px solid #f9f9f9;
+}
+.eg-tooltip .my-modal > * {
+  padding: 14px 28px;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form {
+  font-size: 13px;
+  color: #252525;
+  padding: 0;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group {
+  margin: 0 -28px 18px -28px;
+  padding: 0 28px 18px 28px;
+  border-bottom: 1px solid #f9f9f9;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.double div + div {
+    margin-top: 15px;
+  }
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown {
+  width: 50%;
+  padding-right: 5px;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown > * {
+  width: 100%;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.room-minimum .dropdown + .text {
+  margin-top: 10px;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.pricing-slots > a {
+  display: block;
+  margin: 10px 0;
+  color: #83c23f;
+}
+.eg-tooltip .my-modal .my-modal-content .my-modal-form .form-group.pricing-slots > a:hover {
+  color: #74ab38;
+}
+.dollar-input {
+  font-size: 13px;
+  color: #252525;
+}
+.dollar-input > * {
+  display: inline-block;
+  width: auto;
+}
+.dollar-input .form-control {
+  width: 76px;
+}
+.pricing-slot {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f9f9f9;
+}
+.pricing-slot:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.pricing-slot > div {
+  float: left;
+}
+.pricing-slot > div.spend {
+  width: 25%;
+}
+.pricing-slot > div.time {
+  width: 75%;
+}
+.pricing-slot > div.time .dropdown {
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+.pricing-slot > div.time .dropdown > * {
+  width: 100%;
+}
+.pricing-slot > div.time .dropdown + .dropdown {
+  padding-left: 5px;
+  padding-right: 0;
+}
+.pricing-slot > div > span {
+  display: block;
+  margin-bottom: 8px;
 }

@@ -1521,6 +1521,17 @@ Modal Styles
     textarea {
       height: 75px;
     }
+
+    > .text {
+      display: block;
+      font-size: 13px;
+      line-height: 21px;
+      margin-bottom: 10px;
+
+      > * {
+        display: block;
+      }
+    }
   }
 
   .btn-main {
@@ -2708,5 +2719,137 @@ Calendars Styles
 
   & + #content {
     padding-top: 17px;
+  }
+}
+
+/***************************
+****************************
+Calendars Styles
+****************************
+***************************/
+
+.eg-tooltip {
+  .border(1px, @gray-8);
+
+  .my-modal {
+
+    > * {
+      padding: 14px 28px;
+    }
+
+    .my-modal-content {
+      .my-modal-form {
+        font-size: 13px;
+        color: @gray-4;
+        padding: 0;
+
+        .form-group {
+          margin: 0 -28px 18px -28px;
+          padding: 0 28px 18px 28px;
+          .border-bottom(1px, @gray-8);
+
+          &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+
+          &.double {
+            div {
+              & + div {
+                @media @xs {
+                  margin-top: 15px;
+                }
+              }
+            }
+          }
+
+          &.room-minimum {
+            .dropdown {
+              width: 50%;
+              padding-right: 5px;
+
+              > * {
+                width: 100%;
+              }
+
+              & + .text {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          &.pricing-slots {
+            > a {
+              display: block;
+              margin: 10px 0;
+              color: @green-1;
+
+              &:hover {
+                color: @green-2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dollar-input {
+  font-size: 13px;
+  color: @gray-4;
+
+  > * {
+    display: inline-block;
+    width: auto;
+  }
+
+  .form-control {
+    width: 76px;
+  }
+}
+
+.pricing-slot {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  .border-bottom(1px, @gray-8);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  > div {
+    float: left;
+
+    &.spend {
+      width: 25%;
+    }
+
+    &.time {
+      width: 75%;
+
+      .dropdown {
+        float: left;
+        width: 50%;
+        padding-right: 5px;
+
+        > * {
+          width: 100%;
+        }
+
+        & + .dropdown {
+          padding-left: 5px;
+          padding-right: 0;
+        }
+      }
+    }
+
+    > span {
+      display: block;
+      margin-bottom: 8px;
+    }
   }
 }
