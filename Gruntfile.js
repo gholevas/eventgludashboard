@@ -47,28 +47,27 @@ module.exports = function (grunt) {
       js: {
         src: [
           'bower_components/jquery/dist/jquery.js',
-          'bower_components/bootstrap/dist/js/bootstrap.js',
-          'bower_components/angular/angular.js'
+          'bower_components/bootstrap/dist/js/bootstrap.js'
         ],
-        dest: 'public/js/libs.js'
+        dest: 'public/js/concat/libs.js'
       },
       my_js: {
         src: [
-          'public/js/angular/**/*.js'
+          'public/js/custom/*.js'
         ],
-        dest: 'public/js/main.js'
+        dest: 'public/js/concat/main.js'
       }
     },
 
     uglify: {
       js: {
         files: {
-          'public/js/libs.min.js': 'public/js/libs.js'
+          'public/js/min/libs.min.js': 'public/js/concat/libs.js'
         }
       },
       scripts: {
         files: {
-          'public/js/main.min.js': 'public/js/main.js'
+          'public/js/min/main.min.js': 'public/js/concat/main.js'
         }
       }
     },
@@ -79,7 +78,7 @@ module.exports = function (grunt) {
         tasks: ['less', 'cssmin']
       },
       scripts: {
-        files: ['public/js/angular/**/*.js'],
+        files: ['public/js/custom/*.js'],
         tasks: ['concat:my_js', 'uglify:scripts']
       }
     }
