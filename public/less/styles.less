@@ -2824,12 +2824,25 @@ Calendars Styles
   > div {
     float: left;
 
+    @media @xs {
+      float: none;
+    }
+
     &.spend {
-      width: 25%;
+      width: 15%;
+
+      @media @xs {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
 
     &.time {
-      width: 75%;
+      width: 85%;
+
+      @media @xs {
+        width: 100%;
+      }
 
       .dropdown {
         float: left;

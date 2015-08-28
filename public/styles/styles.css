@@ -2361,11 +2361,27 @@ Calendars Styles
 .pricing-slot > div {
   float: left;
 }
+@media (max-width: 767px) {
+  .pricing-slot > div {
+    float: none;
+  }
+}
 .pricing-slot > div.spend {
-  width: 25%;
+  width: 15%;
+}
+@media (max-width: 767px) {
+  .pricing-slot > div.spend {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .pricing-slot > div.time {
-  width: 75%;
+  width: 85%;
+}
+@media (max-width: 767px) {
+  .pricing-slot > div.time {
+    width: 100%;
+  }
 }
 .pricing-slot > div.time .dropdown {
   float: left;
