@@ -33,6 +33,15 @@
   });
 
   var elem = d.querySelector('.js-switch');
-  var init = new Switchery(elem, {size: 'small'});
+
+  if (elem) {
+    var init = new Switchery(elem, {size: 'small'});
+  }
+
+  Tipped.create('.eg-tipped', {
+    showOn: 'click',
+    hideOn: 'click',
+    hideOthers: true
+  });
 
 })(window, document, jQuery);

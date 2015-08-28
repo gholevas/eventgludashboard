@@ -31,7 +31,8 @@ module.exports = function (grunt) {
             'bower_components/bootstrap/dist/css/bootstrap.css',
             'bower_components/font-awesome/css/font-awesome.min.css',
             'bower_components/animate.css/animate.css',
-            'bower_components/switchery/dist/switchery.css'
+            'bower_components/switchery/dist/switchery.css',
+            'public/styles/lib/tipped.css'
           ],
           'public/styles/styles.min.css': [
             'public/styles/fonts.css',
@@ -49,7 +50,8 @@ module.exports = function (grunt) {
         src: [
           'bower_components/jquery/dist/jquery.js',
           'bower_components/bootstrap/dist/js/bootstrap.js',
-          'bower_components/switchery/dist/switchery.js'
+          'bower_components/switchery/dist/switchery.js',
+          'public/js/lib/tipped.js'
         ],
         dest: 'public/js/concat/libs.js'
       },

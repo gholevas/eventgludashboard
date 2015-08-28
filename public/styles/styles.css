@@ -1223,6 +1223,7 @@ Modal Styles
 .my-modal .my-modal-title.eg-switch .eg-switch > .eg-switch-label {
   margin-right: 5px;
   display: inline-block;
+  color: #252525;
 }
 .my-modal .my-modal-content {
   padding: 0 30px;
