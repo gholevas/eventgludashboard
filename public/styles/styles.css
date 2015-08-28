@@ -2367,6 +2367,7 @@ Calendars Styles
 }
 .eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper {
   padding: 14px 28px 0 28px;
+  margin: 0 -28px;
   text-align: right;
 }
 .eg-tooltip .my-modal .my-modal-content .my-modal-form-btn-wrapper .eg-btn {
