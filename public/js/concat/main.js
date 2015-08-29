@@ -32,4 +32,27 @@
     });
   });
 
+  var elem = d.querySelector('.js-switch');
+
+  if (elem) {
+    var init = new Switchery(elem, {size: 'small'});
+  }
+
+  //Tipped.create('.eg-tipped', {
+  //  showOn: 'click',
+  //  hideOn: 'click',
+  //  hideOthers: true
+  //});
+  //
+  //
+
+  $('.show-min').change(function () {
+    var $el = $(this).parent().parent().next();
+    if (this.checked) {
+      $el.show();
+    } else {
+      $el.hide();
+    }
+  });
+
 })(window, document, jQuery);

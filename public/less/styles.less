@@ -37,10 +37,13 @@
 @gray-27: #c2c2c2;
 @gray-28: #898989;
 @gray-29: #f8f8f8;
+@gray-30: #ebebeb;
 
 @red-1: #f26522;
 @red-2: #da5d20;
 @red-3: #fff4f0;
+
+@brown-1: #746a6a;
 
 @white-1: rgba(255, 255, 255, 0.7);
 
@@ -345,6 +348,16 @@ Button & Links Styles
 
     .fa {
       color: @gray-25;
+    }
+  }
+
+  &.btn-5 {
+    .border-radius(25px);
+    background-color: @bg-color;
+    color: @brown-1;
+
+    &:hover {
+      background-color: @gray-11;
     }
   }
 }
@@ -964,6 +977,17 @@ Manage Venue Details
     font-weight: normal;
   }
 
+  .dropdown {
+    .btn {
+      height: 34px;
+      line-height: 34px;
+
+      .fa {
+        top: 10px;
+      }
+    }
+  }
+
   &.double {
     > div {
       float: left;
@@ -1059,13 +1083,72 @@ Manage Venue Details
     }
   }
 
-  .dropdown {
-    .btn {
-      height: 34px;
-      line-height: 34px;
+  &.triple {
+    > div {
+      .border-bottom(1px, @gray-30);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
 
-      .fa {
-        top: 10px;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .dropdown, .eg-close {
+        display: block;
+        float: left;
+      }
+
+      .dropdown {
+        width: 45%;
+        padding-left: 0;
+        padding-right: 5px;
+
+        .btn {
+          @media @xs {
+            font-size: 12px;
+
+            .fa {
+              right: 10px;
+            }
+          }
+        }
+
+        @media @xs {
+          width: 50%;
+        }
+
+        & + .dropdown {
+          padding-left: 5px;
+          padding-right: 0;
+
+          @media @xs {
+            width: 40%;
+          }
+        }
+
+        > * {
+          width: 100%;
+        }
+      }
+
+      .eg-close {
+        font-size: 30px;
+        line-height: 34px;
+        text-align: right;
+        width: 10%;
+
+        @media @xs {
+          font-size: 20px;
+        }
+
+        a {
+          color: @red-1;
+
+          &:hover {
+            color: @red-2;
+          }
+        }
       }
     }
   }
@@ -1465,10 +1548,117 @@ Modal Styles
     h5 {
       text-transform: uppercase;
     }
+
+    &.eg-switch {
+      h5 {
+        line-height: 27px;
+        float: left;
+      }
+
+      .eg-switch {
+
+        > .eg-switch-label {
+          margin-right: 5px;
+          display: inline-block;
+          color: @gray-4;
+        }
+
+        float: right;
+        font-size: 13px;
+        height: 27px;
+        line-height: 27px;
+      }
+    }
   }
 
   .my-modal-content {
     padding: 0 30px;
+  }
+
+  &.eg-tooltip {
+    > * {
+      padding: 14px 28px;
+    }
+
+    .my-modal-content {
+      .my-modal-form {
+        font-size: 13px;
+        color: @gray-4;
+        padding: 0;
+
+        .form-group {
+          margin: 0 -28px 14px -28px;
+          padding: 0 28px 14px 28px;
+          .border-bottom(1px, @gray-30);
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+          }
+
+          &.double {
+            div {
+              & + div {
+                @media @xs {
+                  margin-top: 15px;
+                }
+              }
+            }
+          }
+
+          &.room-minimum {
+            .dropdown {
+              width: 50%;
+              padding-right: 5px;
+
+              > * {
+                width: 100%;
+              }
+
+              & + .text {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          &.pricing-slots {
+            display: none;
+            .border-top(1px, @gray-30);
+            padding-top: 18px;
+
+            > a {
+              display: block;
+              margin: 10px 0;
+              color: @green-1;
+
+              &:hover {
+                color: @green-2;
+              }
+            }
+          }
+
+          &.nmb {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+      }
+
+      .my-modal-form-btn-wrapper {
+        padding: 14px 28px 0 28px;
+        margin: 0 -28px;
+        text-align: right;
+
+        .eg-btn {
+          width: auto;
+          height: 34px;
+          line-height: 36px;
+          padding: 0 18px;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -1520,6 +1710,21 @@ Modal Styles
 
     textarea {
       height: 75px;
+    }
+
+    > .text {
+      display: block;
+      font-size: 13px;
+      line-height: 21px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > * {
+        display: block;
+      }
     }
   }
 
@@ -1767,6 +1972,15 @@ Menu Styles
   outline: 1px solid @gray-7;
   margin-top: 1px;
   margin-left: 1px;
+  position: relative;
+
+  > button {
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   &.off {
     background-color: @gray-26;
@@ -2656,6 +2870,7 @@ Calendars Styles
   .day {
     float: left;
     width: 14.1984%;
+    cursor: default;
 
     @media @medium {
       width: 14.18%;
@@ -2667,6 +2882,10 @@ Calendars Styles
 
     @media @xs {
       width: 100%;
+    }
+
+    .meta {
+      cursor: pointer;
     }
 
     .name {
@@ -2708,5 +2927,91 @@ Calendars Styles
 
   & + #content {
     padding-top: 17px;
+  }
+}
+
+/***************************
+****************************
+Calendars Styles
+****************************
+***************************/
+
+.dollar-input {
+  font-size: 13px;
+  color: @gray-4;
+
+  > * {
+    display: inline-block;
+    width: auto;
+  }
+
+  .form-control {
+    width: 76px;
+  }
+}
+
+.pricing-slot {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  .border-bottom(1px, @gray-8);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  > div {
+    float: left;
+
+    @media @xs {
+      float: none;
+    }
+
+    &.spend {
+      width: 35%;
+
+      @media @xs {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    &.time {
+      width: 65%;
+
+      @media @xs {
+        width: 100%;
+      }
+
+      .dropdown {
+        float: left;
+        width: 55%;
+        padding-right: 5px;
+
+        .btn {
+          font-size: 12px;
+
+          .fa {
+            right: 10px;
+          }
+        }
+
+        > * {
+          width: 100%;
+        }
+
+        & + .dropdown {
+          padding-left: 5px;
+          padding-right: 0;
+          width: 45%;
+        }
+      }
+    }
+
+    > span {
+      display: block;
+      margin-bottom: 8px;
+    }
   }
 }
