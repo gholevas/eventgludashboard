@@ -1237,13 +1237,12 @@ Modal Styles
   padding: 0;
 }
 .my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group {
-  margin: 0 -28px 18px -28px;
-  padding: 0 28px 18px 28px;
+  margin: 0 -28px 14px -28px;
+  padding: 0 28px 14px 28px;
   border-bottom: 1px solid #ebebeb;
 }
 .my-modal.eg-tooltip .my-modal-content .my-modal-form .form-group:last-child {
   margin-bottom: 0;
-  padding-bottom: 0;
   border-bottom: none;
 }
 @media (max-width: 767px) {
@@ -1338,6 +1337,9 @@ Modal Styles
   font-size: 13px;
   line-height: 21px;
   margin-bottom: 10px;
+}
+.my-modal-form .form-group > .text:last-child {
+  margin-bottom: 0;
 }
 .my-modal-form .form-group > .text > * {
   display: block;
