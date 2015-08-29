@@ -977,6 +977,17 @@ Manage Venue Details
     font-weight: normal;
   }
 
+  .dropdown {
+    .btn {
+      height: 34px;
+      line-height: 34px;
+
+      .fa {
+        top: 10px;
+      }
+    }
+  }
+
   &.double {
     > div {
       float: left;
@@ -1072,13 +1083,72 @@ Manage Venue Details
     }
   }
 
-  .dropdown {
-    .btn {
-      height: 34px;
-      line-height: 34px;
+  &.triple {
+    > div {
+      .border-bottom(1px, @gray-30);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
 
-      .fa {
-        top: 10px;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .dropdown, .eg-close {
+        display: block;
+        float: left;
+      }
+
+      .dropdown {
+        width: 45%;
+        padding-left: 0;
+        padding-right: 5px;
+
+        .btn {
+          @media @xs {
+            font-size: 12px;
+
+            .fa {
+              right: 10px;
+            }
+          }
+        }
+
+        @media @xs {
+          width: 50%;
+        }
+
+        & + .dropdown {
+          padding-left: 5px;
+          padding-right: 0;
+
+          @media @xs {
+            width: 40%;
+          }
+        }
+
+        > * {
+          width: 100%;
+        }
+      }
+
+      .eg-close {
+        font-size: 30px;
+        line-height: 34px;
+        text-align: right;
+        width: 10%;
+
+        @media @xs {
+          font-size: 20px;
+        }
+
+        a {
+          color: @red-1;
+
+          &:hover {
+            color: @red-2;
+          }
+        }
       }
     }
   }
@@ -1902,6 +1972,15 @@ Menu Styles
   outline: 1px solid @gray-7;
   margin-top: 1px;
   margin-left: 1px;
+  position: relative;
+
+  > button {
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   &.off {
     background-color: @gray-26;
@@ -2791,6 +2870,7 @@ Calendars Styles
   .day {
     float: left;
     width: 14.1984%;
+    cursor: default;
 
     @media @medium {
       width: 14.18%;
@@ -2802,6 +2882,10 @@ Calendars Styles
 
     @media @xs {
       width: 100%;
+    }
+
+    .meta {
+      cursor: pointer;
     }
 
     .name {

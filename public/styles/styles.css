@@ -741,6 +741,13 @@ Manage Venue Details
 .form-group label {
   font-weight: normal;
 }
+.form-group .dropdown .btn {
+  height: 34px;
+  line-height: 34px;
+}
+.form-group .dropdown .btn .fa {
+  top: 10px;
+}
 .form-group.double > div {
   float: left;
   width: 50%;
@@ -815,12 +822,66 @@ Manage Venue Details
 .form-group.single-dropdown .dropdown .btn {
   width: 100%;
 }
-.form-group .dropdown .btn {
-  height: 34px;
-  line-height: 34px;
+.form-group.triple > div {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
-.form-group .dropdown .btn .fa {
-  top: 10px;
+.form-group.triple > div:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.form-group.triple > div .dropdown,
+.form-group.triple > div .eg-close {
+  display: block;
+  float: left;
+}
+.form-group.triple > div .dropdown {
+  width: 45%;
+  padding-left: 0;
+  padding-right: 5px;
+}
+@media (max-width: 767px) {
+  .form-group.triple > div .dropdown .btn {
+    font-size: 12px;
+  }
+  .form-group.triple > div .dropdown .btn .fa {
+    right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .form-group.triple > div .dropdown {
+    width: 50%;
+  }
+}
+.form-group.triple > div .dropdown + .dropdown {
+  padding-left: 5px;
+  padding-right: 0;
+}
+@media (max-width: 767px) {
+  .form-group.triple > div .dropdown + .dropdown {
+    width: 40%;
+  }
+}
+.form-group.triple > div .dropdown > * {
+  width: 100%;
+}
+.form-group.triple > div .eg-close {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: right;
+  width: 10%;
+}
+@media (max-width: 767px) {
+  .form-group.triple > div .eg-close {
+    font-size: 20px;
+  }
+}
+.form-group.triple > div .eg-close a {
+  color: #f26522;
+}
+.form-group.triple > div .eg-close a:hover {
+  color: #da5d20;
 }
 .form-control {
   resize: none;
@@ -1598,12 +1659,19 @@ Menu Styles
   height: 142px;
   font-size: 13px;
   color: #464646;
-  position: relative;
   cursor: pointer;
   padding: 15px 18px;
   outline: 1px solid #dcdcdc;
   margin-top: 1px;
   margin-left: 1px;
+  position: relative;
+}
+.day > button {
+  height: 80px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .day.off {
   background-color: #f6f6f6;
@@ -2329,6 +2397,7 @@ Calendars Styles
 .month-wrapper .day {
   float: left;
   width: 14.1984%;
+  cursor: default;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .month-wrapper .day {
@@ -2344,6 +2413,9 @@ Calendars Styles
   .month-wrapper .day {
     width: 100%;
   }
+}
+.month-wrapper .day .meta {
+  cursor: pointer;
 }
 .month-wrapper .day .name {
   font-size: 15px;
